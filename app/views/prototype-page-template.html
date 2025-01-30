@@ -1,0 +1,33 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block beforeContent %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "/"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-xl">{{ prototypeVersion.V1.protoPageTitle}}</h1>
+
+    <h3 class="dfe-heading-s" style="margin-bottom: 12px;">
+      What's changed from the previous iteration
+    </h3>
+    
+    <a href="/versions/"><p style="margin-bottom: 60px; margin-top: 0px;">Link to prototype</p></a>
+    
+
+
+  </div>
+</div>
+
+{% endblock %}
