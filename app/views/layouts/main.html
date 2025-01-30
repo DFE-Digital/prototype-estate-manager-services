@@ -1,0 +1,73 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
+
+{% block header %}
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "true",
+    "showHeaderActionLinks": "true",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "https://gov.uk",
+    "selectedNav": view,
+    "service": {
+      "name": "Estate manager services",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "#",
+        "label" : "Home"
+      }, {
+        "url"  : "#",
+        "label" : "About"
+      }, {
+        "url"  : "#",
+        "label" : "News"
+      }
+    ]
+  })
+}}
+{% endblock %}
+
+
+
+    {% block beforeContent %}
+
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+        {{ govukPhaseBanner({
+        tag: {
+            text: "Prototype"
+        },
+        html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+        }) }}
+
+    {% endblock %}
+
+
+
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/assets/js/dfefrontend.min.js"></script>
+{% endblock %}

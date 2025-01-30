@@ -1,0 +1,54 @@
+//
+// For guidance on how to add CSS and SCSS see:
+// https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
+// 
+
+// Add extra styles here
+
+@import 'node_modules/dfe-frontend/packages/dfefrontend';
+
+@import 'app/assets/sass/_vertical-nav';
+@import 'app/assets/sass/_card-container';
+@import url('https://rsms.me/inter/inter.css');
+$govuk-font-family: 'Inter', sans-serif;
+
+.govuk-width-container { @include govuk-width-container; }
+
+.tableNumbers{
+    font-feature-settings: 'tnum' 1, 'ss01' 1, 'zero' 1;
+}
+
+.govuk-body-l {
+    font-family: 'Inter', sans-serif;
+}
+
+.govuk-body-s {
+    font-family: 'Inter', sans-serif;
+    line-height: 140%;
+}
+
+.govuk-body {
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+.p {
+    font-family: 'Inter', sans-serif;
+}
+
+.a {
+    font-family: 'Inter', sans-serif;
+}
+
+.govuk-phase-banner__text {
+    font-family: 'Inter', sans-serif;
+}
+
+.li {
+    font-family: 'Inter', sans-serif;
+}
+
+.ul {
+    font-family: 'Inter', sans-serif;
+}

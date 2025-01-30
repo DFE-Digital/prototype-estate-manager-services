@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+
+
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+
+    <div class="dfe-grid-column-three-quarters">
+      <h1 class="dfe-heading-xl" style="margin-bottom: 12px;">
+
+        {{serviceName}}
+
+      </h1>
+      <p class="govuk-body-l">Managing your school estate effectively helps save money and keeps a healthy, safe and
+        sustainable school environment.</p>
+
+      <h2 class="dfe-heading-m" style="margin-bottom: 12px;">
+        This is a prototype
+      </h2>
+
+      <p class="govuk-body">It is currently being validated with <a href="#">future users of this service</a>. If you'd like to
+        get involved, <a href="#">please contact us</a>.</p>
+
+        <br>
+
+    </div>
+
+    <!--{% for lifeCycleContentPage in data.lifeCycleContentPages %}
+    <div class="govuk-grid-column-three-quarters">
+      <a href="/content/{{lifeCycleContentPage.pageURL}}"><h4 style="margin-bottom: 0px;">{{ lifeCycleContentPage.pageTitle }}</h4></a>
+    </div>
+    {% endfor %}-->
+
+    <div class="govuk-grid-column-three-quarters">
+
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "View latest version (link not functional yet)"
+        }) }}
+
+        {{ govukButton({
+          text: "Documentation and histories",
+          classes: "govuk-button--secondary"
+        }) }}
+      </div>
+
+  </div>
+</div>
+</div>
+
+<!--<p>{{data | dump}}</p>-->
+
+{% endblock %}
