@@ -13,8 +13,8 @@ module.exports = {
       "pageContent" : {
 
         "pageBlurb":"Advice for schools and responsible bodies to help manage their school buildings and land.",
-        "heading1" : "Lorem",
-        "heading2" : "Ipsum"
+        "heading1" : "[Content coming soon]",
+        "heading2" : "[Content coming soon]"
       }
 
     },
@@ -22,8 +22,9 @@ module.exports = {
       "pageTitle" : "Plan your estates maintenance and improvements",
       "pageURL" : "plan-your-estates",
       "pageContent" : {
-        "heading1" : "Balori",
-        "heading2" : "Dolor"
+        "pageBlurb":"[Content coming soon]",
+        "heading1" : "[Content coming soon]",
+        "heading2" : "[Content coming soon]"
       }
 
     },
@@ -31,8 +32,9 @@ module.exports = {
       "pageTitle" : "Get funding to implement your plan",
       "pageURL" : "get-funding",
       "pageContent" : {
-        "heading1" : "Balori",
-        "heading2" : "Dolor"
+        "pageBlurb":"[Content coming soon]",
+        "heading1" : "[Content coming soon]",
+        "heading2" : "[Content coming soon]"
       }
 
     },
@@ -40,8 +42,9 @@ module.exports = {
       "pageTitle" : "Commission and oversee construction and maintenance work",
       "pageURL" : "commission-and-oversee",
       "pageContent" : {
-        "heading1" : "Balori",
-        "heading2" : "Dolor"
+        "pageBlurb":"[Content coming soon]",
+        "heading1" : "[Content coming soon]",
+        "heading2" : "[Content coming soon]"
       }
 
     },
@@ -49,6 +52,7 @@ module.exports = {
       "pageTitle" : "Report spending and activities",
       "pageURL" : "report-spending-and-activities",
       "pageContent" : {
+        "pageBlurb":"[Content coming soon]",
         "heading1" : "Know your legal responsiblities",
         "heading2" : "Report your use of Schools Capital Allocation funding",
         "heading3" : "Deadlines and submission processes",
@@ -74,6 +78,7 @@ module.exports = {
       "resourceTitle" : "Benefits of strategic estate management",
       "resourceURL" : "benefits-of-strategic-estate-management",
       "resourceFormat": "PDF, 687KB",
+      "resourceFormatUserCentred": "PDF document",
       "resourcePublishedDate": "11 June 2023",
       
       "resourceContent" : {
@@ -82,7 +87,11 @@ module.exports = {
         "what" : "This tool will help your school or trust's approach to estate management. It will help you identify where you are achieving best practice and the areas what need further development.",
         "who" : "This tool should be used by headteachers, executive leaders and governing boards. A range of responses will help share knowledge and understanding.",
         "how" : "You will be asked a number of questions about your school or trust, across 12 areas of estate management. You should answer 'yes' or 'no', or 'in part' using the drop downs. There are more detailed instructions within the tool."
-      }
+      },
+
+      "resourceTags": [
+        "tag 1", "tag 2"
+      ]
 
     },
 
@@ -93,10 +102,10 @@ module.exports = {
       
       "resourceContent" : {
 
-        "resourceIntroBlurb":"lorem ipsum dolor -- Self assessment tool",
-        "what" : "Lorem",
-        "who" : "Ipsum",
-        "how" : "Ipsum"
+        "resourceIntroBlurb":"[Content coming soon] -- Self assessment tool",
+        "what" : "[Content coming soon]",
+        "who" : "[Content coming soon]",
+        "how" : "[Content coming soon]"
       }
 
     },
@@ -107,10 +116,10 @@ module.exports = {
       
       "resourceContent" : {
 
-        "resourceIntroBlurb":"lorem ipsum dolor -- A guide to strategic estate documents",
-        "what" : "Lorem",
-        "who" : "Ipsum",
-        "how" : "Ipsum"
+        "resourceIntroBlurb":"[Content coming soon] -- A guide to strategic estate documents",
+        "what" : "[Content coming soon]",
+        "who" : "[Content coming soon]",
+        "how" : "[Content coming soon]"
       }
 
     },
@@ -121,10 +130,10 @@ module.exports = {
       
       "resourceContent" : {
 
-        "resourceIntroBlurb":"lorem ipsum dolor -- Good estate governance",
-        "what" : "Lorem",
-        "who" : "Ipsum",
-        "how" : "Ipsum"
+        "resourceIntroBlurb":"[Content coming soon] -- Good estate governance",
+        "what" : "[Content coming soon]",
+        "who" : "[Content coming soon]",
+        "how" : "[Content coming soon]"
       }
 
     },
@@ -136,7 +145,7 @@ module.exports = {
       
       "resourceContent" : {
 
-        "resourceIntroBlurb":"lorem ipsum dolor -- Top 10 estates checks for boards",
+        "resourceIntroBlurb":"[Content coming soon] -- Top 10 estates checks for boards",
         "what" : "Lorem",
         "who" : "Ipsum",
         "how" : "Ipsum"
@@ -151,7 +160,7 @@ module.exports = {
       
       "resourceContent" : {
 
-        "resourceIntroBlurb":"lorem ipsum dolor -- The information you need to know about your estate",
+        "resourceIntroBlurb":"[Content coming soon] -- The information you need to know about your estate",
         "what" : "Lorem",
         "who" : "Ipsum",
         "how" : "Ipsum"
@@ -166,7 +175,7 @@ module.exports = {
       
       "resourceContent" : {
 
-        "resourceIntroBlurb":"lorem ipsum dolor -- Introduction to condition surveys",
+        "resourceIntroBlurb":"[Content coming soon] -- Introduction to condition surveys",
         "what" : "Lorem",
         "who" : "Ipsum",
         "how" : "Ipsum"
@@ -181,7 +190,7 @@ module.exports = {
       
       "resourceContent" : {
 
-        "resourceIntroBlurb":"lorem ipsum dolor -- How to begin estate performance management and benchmarking",
+        "resourceIntroBlurb":"[Content coming soon] -- How to begin estate performance management and benchmarking",
         "what" : "Lorem",
         "who" : "Ipsum",
         "how" : "Ipsum"
@@ -196,7 +205,7 @@ module.exports = {
       
       "resourceContent" : {
 
-        "resourceIntroBlurb":"lorem ipsum dolor -- Tips to reduce energy and water use in schools",
+        "resourceIntroBlurb":"[Content coming soon] -- Tips to reduce energy and water use in schools",
         "what" : "Lorem",
         "who" : "Ipsum",
         "how" : "Ipsum"
@@ -211,7 +220,7 @@ module.exports = {
       
       "resourceContent" : {
 
-        "resourceIntroBlurb":"lorem ipsum dolor -- How to prioritise maintenance",
+        "resourceIntroBlurb":"[Content coming soon] -- How to prioritise maintenance",
         "what" : "Lorem",
         "who" : "Ipsum",
         "how" : "Ipsum"
@@ -226,7 +235,7 @@ module.exports = {
       
       "resourceContent" : {
 
-        "resourceIntroBlurb":"lorem ipsum dolor -- Maintenance risk based tool",
+        "resourceIntroBlurb":"[Content coming soon] -- Maintenance risk based tool",
         "what" : "Lorem",
         "who" : "Ipsum",
         "how" : "Ipsum"
@@ -241,7 +250,7 @@ module.exports = {
       
       "resourceContent" : {
 
-        "resourceIntroBlurb":"lorem ipsum dolor -- Compliance tracker",
+        "resourceIntroBlurb":"[Content coming soon] -- Compliance tracker",
         "what" : "Lorem",
         "who" : "Ipsum",
         "how" : "Ipsum"
@@ -256,7 +265,7 @@ module.exports = {
       
       "resourceContent" : {
 
-        "resourceIntroBlurb":"lorem ipsum dolor -- Estate projects checklist",
+        "resourceIntroBlurb":"[Content coming soon] -- Estate projects checklist",
         "what" : "Lorem",
         "who" : "Ipsum",
         "how" : "Ipsum"
@@ -271,7 +280,7 @@ module.exports = {
       
       "resourceContent" : {
 
-        "resourceIntroBlurb":"lorem ipsum dolor -- Sector organisations for further information",
+        "resourceIntroBlurb":"[Content coming soon] -- Sector organisations for further information",
         "what" : "Lorem",
         "who" : "Ipsum",
         "how" : "Ipsum"
@@ -286,7 +295,7 @@ module.exports = {
       
       "resourceContent" : {
 
-        "resourceIntroBlurb":"lorem ipsum dolor -- Estate management competency framework",
+        "resourceIntroBlurb":"[Content coming soon] -- Estate management competency framework",
         "what" : "Lorem",
         "who" : "Ipsum",
         "how" : "Ipsum"
