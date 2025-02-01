@@ -9,7 +9,9 @@
 
 @import 'app/assets/sass/_vertical-nav';
 @import 'app/assets/sass/_card-container';
+@import 'app/assets/sass/_dfe-page-header';
 @import url('https://rsms.me/inter/inter.css');
+
 $govuk-font-family: 'Inter', sans-serif;
 
 .govuk-width-container { @include govuk-width-container; }
@@ -30,6 +32,22 @@ $govuk-font-family: 'Inter', sans-serif;
 .govuk-body {
     font-family: 'Inter', sans-serif;
 }
+
+.govuk-heading-s {
+    font-family: 'Inter', sans-serif;
+}
+
+.govuk-heading-m {
+    font-family: 'Inter', sans-serif;
+}
+
+.govuk-heading-l {
+    font-family: 'Inter', sans-serif;
+}
+.govuk-heading-xl {
+    font-family: 'Inter', sans-serif;
+}
+
 
 
 

@@ -1,40 +1,95 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
-
-{% block beforeContent %}
-
-{{ govukBackLink({
-  text: "Back",
-  href: "/"
-}) }}
-
-{% endblock %}
+{% set pageName="Tools and resources" %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+<!-- IMPORTS -->
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+<!--Add imports below -->
+<!---->
 
 
-    <h1 class="dfe-heading-xl">{{resource.resourceTitle}}</h1>
+<div class="govuk-grid-row" style=" padding: 16px; background-color: #ebf2f6; display: block; margin-bottom: 40px;">
 
+  <div class="govuk-grid-column-full">
     
-    
-    
-
-    
-    
-    <p class="govuk-body-l">{{resource.resourceContent.resourceIntroBlurb}}</p>
-    <h5>{{resource.resourceContent.what}}</h5>
-    <h5>{{resource.resourceContent.who}}</h5>
-    <h5>{{resource.resourceContent.how}}</h5>
-    
-    <a href="/tools-and-resources/{{ resource.resourceURL }}"><p style="margin-bottom: 60px; margin-top: 0px;">Link</p></a>
-
-
+    {{ govukBreadcrumbs({
+      items: [
+        {
+          text: "Estate manager services",
+          href: "../index"
+        },
+        {
+          text: "Tools and resources",
+          href: "/tools-and-resources"
+        }
+      ]
+    }) }}
 
   </div>
+
+  <div class="govuk-grid-column-three-quarters">
+
+    
+
+    <h1 class="govuk-heading-l" style="margin-bottom:0.1em;">{{resource.resourceTitle}}</h1>
+    <div class="govuk-button-group">
+      <strong class="govuk-tag" style="margin-bottom:0.2em; margin-right:12px;">
+        {{ resource.resourceFormatUserCentred }}
+      </strong>
+      <p class="govuk-body-s" style="margin-bottom:1em;  margin-top:0.8em;">
+        Published: {{ resource.resourcePublishedDate }}
+      </p>
+    </div>
+
+    
+  
+  </div>
+
+  <div class="govuk-grid-column-one-quarter">
+    
+    <div class="govuk-button-group">
+      
+      {{ govukButton({
+        text: "Download"
+        }) 
+      }}
+
+      {{ govukButton({
+        text: "Share",
+        classes: "govuk-button--secondary"
+      }) }}
+
+    </div>
+
+  </div>
+
 </div>
+
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-three-quarters">
+
+      <p class="govuk-body-l" style="margin-bottom:1em;  margin-top:0.8em;">{{resource.resourceContent.resourceIntroBlurb}}</p>
+    
+      <h5 class="govuk-heading-s">What it is:</h5>
+      <p class="govuk-body">{{resource.resourceContent.what}}</p>
+      
+      <h5 class="govuk-heading-s">Who it is for:</h5>
+      <p class="govuk-body">{{resource.resourceContent.who}}</p>
+      
+      <h5 class="govuk-heading-s">How to use it:</h5>
+      <p class="govuk-body">{{resource.resourceContent.how}}</p>
+
+    </div>
+
+</div>
+
+
 
 {% endblock %}
