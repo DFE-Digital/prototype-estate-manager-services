@@ -36,6 +36,12 @@
     </div>
     {% endfor %}-->
 
+    {% for resource in data.resources %}
+    <div class="govuk-grid-column-three-quarters">
+      <a href="/tools-and-resources/{{resource.resourceURL}}"><h4 style="margin-bottom: 0px;">{{ resource.resourceTitle }}</h4></a>
+    </div>
+    {% endfor %}
+
     <div class="govuk-grid-column-three-quarters">
 
 
@@ -55,6 +61,27 @@
   </div>
 </div>
 </div>
+
+
+
+
+<!--<iframe
+
+height="450"
+src="https://embed.figma.com/proto/bZUfr0UdaXP31q1hnBZAQs/Ed-Estates-%2F-Estate-Manager-Se[…]-id=5472%3A2797&show-proto-sidebar=1&hotspot-hints=0&hide-ui=1?embed-host=EstateManagerServices">
+</iframe>-->
+
+
+
+
+
+
+
+
+
+
+            
+
 
 <!--<p>{{data | dump}}</p>-->
 

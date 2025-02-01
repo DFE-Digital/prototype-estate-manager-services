@@ -10,7 +10,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 const sessionDataDefaults = require('./data/session-data-defaults')
 
-
+// Content pages
 router.get('/content/:pageURL', (req, res) => {
     
     const lifeCycleContentPages = req.session.data.lifeCycleContentPages
@@ -25,5 +25,23 @@ router.get('/content/:pageURL', (req, res) => {
 
     res.render('content-page-template.html', {
         lifeCycleContentPage
+    })
+})
+
+// Resource pages
+router.get('/tools-and-resources/:resourceURL', (req, res) => {
+    
+    const resources = req.session.data.resources
+
+    const resourceURL = req.params.resourceURL
+
+    const resource = resources.find( (resource) => {
+        return resource.resourceURL === resourceURL
+    })
+
+    console.log(resource)
+
+    res.render('resource-page-template.html', {
+        resource
     })
 })
