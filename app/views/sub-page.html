@@ -1,0 +1,36 @@
+{% extends "layouts/sub-page.html" %}
+
+{% set pageName="x" %}
+
+{% block content %}
+
+<div class="dfe-width-container">
+
+  <div class="govuk-grid-row govuk-!-padding-top-7">
+    
+    <div class="govuk-grid-column-three-thirds">
+
+      
+      <h2 class="dfe-heading-m">Content pages</h2>
+          {% for lifeCycleContentPage in data.lifeCycleContentPages %}
+              <a href="/content/{{lifeCycleContentPage.pageURL}}"><h4 style="margin-bottom: 0px;">{{ lifeCycleContentPage.pageTitle }}</h4></a>
+
+          {% endfor %}
+
+      
+
+
+
+      
+      
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/assets/js/dfefrontend.min.js"></script>
+{% endblock %}

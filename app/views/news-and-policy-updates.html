@@ -1,0 +1,82 @@
+{% extends "layouts/sub-page.html" %}
+
+{% set pageName="News and policy updates" %}
+
+{% block header %}
+
+{{ header({
+  "showNav": "true",
+  "showSearch": "true",
+  "showHeaderActionLinks": "true",
+  "logoPath": "public/images",
+  "searchAction": "/search/",
+  "searchInputName": "q",
+  "logoAltText": "Department for Education",
+  "homeHref": "/",
+  "selectedNav": "News and policy updates",
+  "service": {
+    "name": "Manage and maintain education estates",
+    "serviceUrl": "/"
+  },
+  "headerActionLinks": [
+    {
+      "url"  : "/",
+      "label" : "Sign in"
+    }
+  ],
+  "primaryLinks": [
+      {
+      "url"  : "/",
+      "label" : "Home"
+    }, {
+      "url"  : "lifecycle-pages",
+      "label" : "Guidance"
+    },
+    {
+      "url"  : "tools-and-resources",
+      "label" : "Tools and resources"
+    }, {
+      "url"  : "news-and-policy-updates",
+      "label" : "News and policy updates"
+    }
+  ]
+})
+}}
+
+
+
+<div class="dfe-content-page--header govuk-!-padding-bottom-4" style="background-color:#EAF2F6;">
+  <div class="dfe-width-container">
+    <div class="govuk-grid-row govuk-!-padding-top-7">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-4">News and policy updates</h1>
+        <p class="govuk-body">[Content coming soon]</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+{% block content %}
+
+
+<div class="dfe-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      [Content coming soon]
+    
+    </div>  
+  </div>
+</div>
+
+{% endblock %}
