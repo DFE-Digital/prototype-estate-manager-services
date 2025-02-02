@@ -18,7 +18,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
     "searchInputName": "q",
     "logoAltText": "Department for Education",
     "homeHref": "/",
-    "selectedNav": "Home",
+    "selectedNav": view,
     "service": {
       "name": "Manage and maintain education estates",
       "serviceUrl": "/"
@@ -26,7 +26,11 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
     "headerActionLinks": [
       {
         "url"  : "/",
-        "label" : "Sign in"
+        "label" : "My account"
+      },
+      {
+        "url"  : "/",
+        "label" : "Sign out"
       }
     ],
     "primaryLinks": [
@@ -34,10 +38,6 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
         "url"  : "/",
         "label" : "Home"
       }, {
-        "url"  : "lifecycle-pages",
-        "label" : "Guidance"
-      },
-      {
         "url"  : "tools-and-resources",
         "label" : "Tools and resources"
       }, {
@@ -47,9 +47,32 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
     ]
   })
 }}
+
+
+<div class="dfe-content-page--header govuk-!-padding-bottom-4" style="background-color:#EAF2F6;">
+  <div class="dfe-width-container">
+    <div class="govuk-grid-row govuk-!-padding-top-7">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">[subPage pageTitle]</h1>
+        <p class="govuk-body-l">[subPage pageBlurb]</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 {% endblock %}
+
+
 
 {% block scripts %}
   {{ super() }}
   <script src="/assets/js/dfefrontend.min.js"></script>
 {% endblock %}
+
+
+
+
+
+
