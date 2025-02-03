@@ -65,12 +65,9 @@ module.exports = {
     }
 ],
 
-// RESOURCES (Tools, guidance, html pages, etc) //
-// Content not final //
 
-// Tools and checklists
+// TOOLS AND RESOURCES (CONTENT HUB)
 // Tools to help schools and responsible bodies manage their school buildings and land.
-
 
 "resources" : [
 
@@ -99,6 +96,7 @@ module.exports = {
       "resourceTitle" : "Self assessment tool",
       "resourceURL" : "self-assessment-tool",
       "resourceFormat": "XLSX, 101KB",
+      "resourceFormatUserCentred": "Excel spreadsheet",
       
       "resourceContent" : {
 
@@ -113,6 +111,7 @@ module.exports = {
       "resourceTitle" : "A guide to strategic estate documents",
       "resourceURL" : "a-guide-to-strategic-estate-documents",
       "resourceFormat": "PDF, 872KB",
+      "resourceFormatUserCentred": "PDF document",
       
       "resourceContent" : {
 
@@ -127,6 +126,7 @@ module.exports = {
       "resourceTitle" : "Good estate governance",
       "resourceURL" : "good-estate-governance",
       "resourceFormat": "DOCX, 871KB",
+      "resourceFormatUserCentred": "Word document",
       
       "resourceContent" : {
 
@@ -142,13 +142,14 @@ module.exports = {
       "resourceTitle" : "Top 10 estates checks for boards",
       "resourceURL" : "top-10-estates-checks-for-boards",
       "resourceFormat": "PDF, 634KB",
+      "resourceFormatUserCentred": "PDF document",
       
       "resourceContent" : {
 
         "resourceIntroBlurb":"[Content coming soon] -- Top 10 estates checks for boards",
-        "what" : "Lorem",
-        "who" : "Ipsum",
-        "how" : "Ipsum"
+        "what" : "[Content coming soon]",
+        "who" : "[Content coming soon]",
+        "how" : "[Content coming soon]"
       }
 
     },
@@ -157,13 +158,14 @@ module.exports = {
       "resourceTitle" : "The information you need to know about your estate",
       "resourceURL" : "the-information-you-need-to-know-about-your-estate",
       "resourceFormat": "ODT, 871KB",
+      "resourceFormatUserCentred": "Word document",
       
       "resourceContent" : {
 
         "resourceIntroBlurb":"[Content coming soon] -- The information you need to know about your estate",
-        "what" : "Lorem",
-        "who" : "Ipsum",
-        "how" : "Ipsum"
+        "what" : "[Content coming soon]",
+        "who" : "[Content coming soon]",
+        "how" : "[Content coming soon]"
       }
 
     },
@@ -172,13 +174,14 @@ module.exports = {
       "resourceTitle" : "Introduction to condition surveys",
       "resourceURL" : "introduction-to-condition-surveys",
       "resourceFormat": "PDF, 610KB",
+      "resourceFormatUserCentred": "PDF document",
       
       "resourceContent" : {
 
         "resourceIntroBlurb":"[Content coming soon] -- Introduction to condition surveys",
-        "what" : "Lorem",
-        "who" : "Ipsum",
-        "how" : "Ipsum"
+        "what" : "[Content coming soon]",
+        "who" : "[Content coming soon]",
+        "how" : "[Content coming soon]"
       }
 
     },
@@ -187,13 +190,14 @@ module.exports = {
       "resourceTitle" : "How to begin estate performance management and benchmarking",
       "resourceURL" : "how-to-begin-estate-performance-management-and-benchmarking",
       "resourceFormat": "DOCX, 907KB",
+      "resourceFormatUserCentred": "Word document",
       
       "resourceContent" : {
 
         "resourceIntroBlurb":"[Content coming soon] -- How to begin estate performance management and benchmarking",
-        "what" : "Lorem",
-        "who" : "Ipsum",
-        "how" : "Ipsum"
+        "what" : "[Content coming soon]",
+        "who" : "[Content coming soon]",
+        "how" : "[Content coming soon]"
       }
 
     },
@@ -202,13 +206,14 @@ module.exports = {
       "resourceTitle" : "Tips to reduce energy and water use in schools",
       "resourceURL" : "tips-to-reduce-energy-and-water-use-in-schools",
       "resourceFormat": "PDF, 610KB",
+      "resourceFormatUserCentred": "PDF document",
       
       "resourceContent" : {
 
         "resourceIntroBlurb":"[Content coming soon] -- Tips to reduce energy and water use in schools",
-        "what" : "Lorem",
-        "who" : "Ipsum",
-        "how" : "Ipsum"
+        "what" : "[Content coming soon]",
+        "who" : "[Content coming soon]",
+        "how" : "[Content coming soon]"
       }
 
     },
@@ -217,13 +222,14 @@ module.exports = {
       "resourceTitle" : "How to prioritise maintenance",
       "resourceURL" : "how-to-prioritise-maintenance",
       "resourceFormat": "PDF, 671KB",
+      "resourceFormatUserCentred": "PDF document",
       
       "resourceContent" : {
 
         "resourceIntroBlurb":"[Content coming soon] -- How to prioritise maintenance",
-        "what" : "Lorem",
-        "who" : "Ipsum",
-        "how" : "Ipsum"
+        "what" : "[Content coming soon]",
+        "who" : "[Content coming soon]",
+        "how" : "[Content coming soon]"
       }
 
     },
@@ -232,13 +238,14 @@ module.exports = {
       "resourceTitle" : "Maintenance risk based tool",
       "resourceURL" : "maintenance-risk-based-tool",
       "resourceFormat": "XLSX, 195KB",
+      "resourceFormatUserCentred": "Excel spreadsheet",
       
       "resourceContent" : {
 
         "resourceIntroBlurb":"[Content coming soon] -- Maintenance risk based tool",
-        "what" : "Lorem",
-        "who" : "Ipsum",
-        "how" : "Ipsum"
+        "what" : "[Content coming soon]",
+        "who" : "[Content coming soon]",
+        "how" : "[Content coming soon]"
       }
 
     },
@@ -247,13 +254,14 @@ module.exports = {
       "resourceTitle" : "Compliance tracker",
       "resourceURL" : "compliance-tracker",
       "resourceFormat": "XLSX, 104KB",
+      "resourceFormatUserCentred": "Excel spreadsheet",
       
       "resourceContent" : {
 
         "resourceIntroBlurb":"[Content coming soon] -- Compliance tracker",
-        "what" : "Lorem",
-        "who" : "Ipsum",
-        "how" : "Ipsum"
+        "what" : "[Content coming soon]",
+        "who" : "[Content coming soon]",
+        "how" : "[Content coming soon]"
       }
 
     },
@@ -262,13 +270,14 @@ module.exports = {
       "resourceTitle" : "Estate projects checklist",
       "resourceURL" : "estate-projects-checklist",
       "resourceFormat": "DOCX, 871KB",
+      "resourceFormatUserCentred": "Word document",
       
       "resourceContent" : {
 
         "resourceIntroBlurb":"[Content coming soon] -- Estate projects checklist",
-        "what" : "Lorem",
-        "who" : "Ipsum",
-        "how" : "Ipsum"
+        "what" : "[Content coming soon]",
+        "who" : "[Content coming soon]",
+        "how" : "[Content coming soon]"
       }
 
     },
@@ -277,13 +286,14 @@ module.exports = {
       "resourceTitle" : "Sector organisations for further information",
       "resourceURL" : "sector-organisations-for-further-information",
       "resourceFormat": "PDF, 643KB",
+      "resourceFormatUserCentred": "PDF document",
       
       "resourceContent" : {
 
         "resourceIntroBlurb":"[Content coming soon] -- Sector organisations for further information",
-        "what" : "Lorem",
-        "who" : "Ipsum",
-        "how" : "Ipsum"
+        "what" : "[Content coming soon]",
+        "who" : "[Content coming soon]",
+        "how" : "[Content coming soon]"
       }
 
     },
@@ -292,13 +302,14 @@ module.exports = {
       "resourceTitle" : "Estate management competency framework",
       "resourceURL" : "estate-management-competency-framework",
       "resourceFormat": "PDF, 887KB",
+      "resourceFormatUserCentred": "PDF document",
       
       "resourceContent" : {
 
         "resourceIntroBlurb":"[Content coming soon] -- Estate management competency framework",
-        "what" : "Lorem",
-        "who" : "Ipsum",
-        "how" : "Ipsum"
+        "what" : "[Content coming soon]",
+        "who" : "[Content coming soon]",
+        "how" : "[Content coming soon]"
       }
 
     }

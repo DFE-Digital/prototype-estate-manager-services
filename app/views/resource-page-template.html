@@ -1,5 +1,47 @@
 {% extends "layouts/main.html" %}
 
+{% block header %}
+
+{{ header({
+    "showNav": "true",
+    "showSearch": "true",
+    "showHeaderActionLinks": "true",
+    "logoPath": "public/images",
+    "searchAction": "/search/",
+    "searchInputName": "q",
+    "logoAltText": "Department for Education",
+    "homeHref": "/",
+    "selectedNav": "Tools and resources",
+    "service": {
+      "name": "Manage and maintain education estates",
+      "serviceUrl": "/"
+    },
+    "headerActionLinks": [
+      {
+        "url"  : "/",
+        "label" : "Sign in"
+      }
+    ],
+    "primaryLinks": [
+        {
+        "url"  : "/",
+        "label" : "Home"
+      }, {
+        "url"  : "lifecycle-pages",
+        "label" : "Guidance"
+      },
+      {
+        "url"  : "tools-and-resources",
+        "label" : "Tools and resources"
+      }, {
+        "url"  : "news-and-policy-updates",
+        "label" : "News and policy updates"
+      }
+    ]
+  })
+}}
+{% endblock %}
+
 {% set pageName="Tools and resources" %}
 
 {% block content %}
