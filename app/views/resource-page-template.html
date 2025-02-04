@@ -80,9 +80,15 @@
 
     <h1 class="govuk-heading-l" style="margin-bottom:0.1em;">{{resource.resourceTitle}}</h1>
     <div class="govuk-button-group">
+
+      <strong class="govuk-tag" style=" border: solid,1px; background-color: white; margin-bottom:0.2em; margin-right:12px;">
+        {{ resource.resourceType }}
+      </strong>
+
       <strong class="govuk-tag" style="margin-bottom:0.2em; margin-right:12px;">
         {{ resource.resourceFormatUserCentred }}
       </strong>
+      
       <p class="govuk-body-s" style="margin-bottom:1em;  margin-top:0.8em;">
         Published: {{ resource.resourcePublishedDate }}
       </p>
@@ -113,22 +119,26 @@
 </div>
 
 
-<div class="govuk-grid-row">
+<div class="dfe-width-container">
 
-    <div class="govuk-grid-column-three-quarters">
+  <div class="govuk-grid-row">
 
-      <p class="govuk-body-l" style="margin-bottom:1em;  margin-top:0.8em;">{{resource.resourceContent.resourceIntroBlurb}}</p>
-    
-      <h5 class="govuk-heading-s">What it is:</h5>
-      <p class="govuk-body">{{resource.resourceContent.what}}</p>
+      <div class="dfe-grid-column-three-quarters">
+
+        <p class="govuk-body-l" style="margin-bottom:1em;  margin-top:0.8em;">{{resource.resourceContent.resourceIntroBlurb}}</p>
       
-      <h5 class="govuk-heading-s">Who it is for:</h5>
-      <p class="govuk-body">{{resource.resourceContent.who}}</p>
-      
-      <h5 class="govuk-heading-s">How to use it:</h5>
-      <p class="govuk-body">{{resource.resourceContent.how}}</p>
+        <h5 class="govuk-heading-s">What it is:</h5>
+        <p class="govuk-body">{{resource.resourceContent.what}}</p>
+        
+        <h5 class="govuk-heading-s">Who it is for:</h5>
+        <p class="govuk-body">{{resource.resourceContent.who}}</p>
+        
+        <h5 class="govuk-heading-s">How to use it:</h5>
+        <p class="govuk-body">{{resource.resourceContent.how}}</p>
 
-    </div>
+      </div>
+
+  </div>
 
 </div>
 

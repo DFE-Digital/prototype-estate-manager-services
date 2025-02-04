@@ -1,0 +1,14 @@
+.app-resource-card {
+    border: solid, 1px;
+    padding: 12px;
+    padding-bottom: 0px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+ 
+}
+
+.app-resource-card a {
+    text-decoration: none;
+}

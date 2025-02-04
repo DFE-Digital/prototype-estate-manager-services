@@ -72,22 +72,29 @@
 <div class="dfe-width-container">
   <div class="govuk-grid-row">
 
+    <!--Filters-->
     <div class="dfe-grid-column-one-quarter">
       <h3 class="govuk-heading-s">Filters</h3>
     </div>
 
     <div class="dfe-grid-column-three-quarters">
+
+      <!--CARDS-->
       {% for resource in data.resources %}
-      <a href="/tools-and-resources/{{resource.resourceURL}}"><h4 style="margin-bottom: 0px;">{{ resource.resourceTitle }}</h4></a>
+      <div class="app-resource-card">
+
+        <a href="/tools-and-resources/{{resource.resourceURL}}">
+          <h3 class="govuk-heading-m">{{ resource.resourceTitle }}</h3>
+          <p class="govuk-body">{{ resource.resourceContent.resourceIntroBlurb }}</p>
+          <p class="gov-uk-body">View resource</p>
+        </a>
+
+      </div>
       {% endfor %}
+
     </div>
     
-    
-    <div class="govuk-grid-column-two-thirds">
-
-      
-    
-    </div>  
+  
   </div>
 </div>
 
