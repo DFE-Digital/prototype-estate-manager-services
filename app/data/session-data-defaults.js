@@ -77,6 +77,7 @@ module.exports = {
       "resourceFormat": "PDF, 687KB",
       "resourceFormatUserCentred": "PDF document",
       "resourcePublishedDate": "11 June 2023",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
@@ -97,6 +98,7 @@ module.exports = {
       "resourceURL" : "self-assessment-tool",
       "resourceFormat": "XLSX, 101KB",
       "resourceFormatUserCentred": "Excel spreadsheet",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
@@ -112,6 +114,7 @@ module.exports = {
       "resourceURL" : "a-guide-to-strategic-estate-documents",
       "resourceFormat": "PDF, 872KB",
       "resourceFormatUserCentred": "PDF document",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
@@ -127,6 +130,7 @@ module.exports = {
       "resourceURL" : "good-estate-governance",
       "resourceFormat": "DOCX, 871KB",
       "resourceFormatUserCentred": "Word document",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
@@ -143,6 +147,7 @@ module.exports = {
       "resourceURL" : "top-10-estates-checks-for-boards",
       "resourceFormat": "PDF, 634KB",
       "resourceFormatUserCentred": "PDF document",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
@@ -159,6 +164,7 @@ module.exports = {
       "resourceURL" : "the-information-you-need-to-know-about-your-estate",
       "resourceFormat": "ODT, 871KB",
       "resourceFormatUserCentred": "Word document",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
@@ -175,6 +181,7 @@ module.exports = {
       "resourceURL" : "introduction-to-condition-surveys",
       "resourceFormat": "PDF, 610KB",
       "resourceFormatUserCentred": "PDF document",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
@@ -191,6 +198,7 @@ module.exports = {
       "resourceURL" : "how-to-begin-estate-performance-management-and-benchmarking",
       "resourceFormat": "DOCX, 907KB",
       "resourceFormatUserCentred": "Word document",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
@@ -207,6 +215,7 @@ module.exports = {
       "resourceURL" : "tips-to-reduce-energy-and-water-use-in-schools",
       "resourceFormat": "PDF, 610KB",
       "resourceFormatUserCentred": "PDF document",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
@@ -223,6 +232,7 @@ module.exports = {
       "resourceURL" : "how-to-prioritise-maintenance",
       "resourceFormat": "PDF, 671KB",
       "resourceFormatUserCentred": "PDF document",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
@@ -239,6 +249,7 @@ module.exports = {
       "resourceURL" : "maintenance-risk-based-tool",
       "resourceFormat": "XLSX, 195KB",
       "resourceFormatUserCentred": "Excel spreadsheet",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
@@ -255,6 +266,7 @@ module.exports = {
       "resourceURL" : "compliance-tracker",
       "resourceFormat": "XLSX, 104KB",
       "resourceFormatUserCentred": "Excel spreadsheet",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
@@ -271,6 +283,7 @@ module.exports = {
       "resourceURL" : "estate-projects-checklist",
       "resourceFormat": "DOCX, 871KB",
       "resourceFormatUserCentred": "Word document",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
@@ -287,6 +300,7 @@ module.exports = {
       "resourceURL" : "sector-organisations-for-further-information",
       "resourceFormat": "PDF, 643KB",
       "resourceFormatUserCentred": "PDF document",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
@@ -303,6 +317,7 @@ module.exports = {
       "resourceURL" : "estate-management-competency-framework",
       "resourceFormat": "PDF, 887KB",
       "resourceFormatUserCentred": "PDF document",
+      "resourceType" : "Guidance",
       
       "resourceContent" : {
 
