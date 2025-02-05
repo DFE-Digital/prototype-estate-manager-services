@@ -1,0 +1,156 @@
+{% extends "layouts/sub-page.html" %}
+
+{% set pageName="Condition data" %}
+
+{% block header %}
+
+{{ header({
+  "showNav": "true",
+  "showSearch": "true",
+  "showHeaderActionLinks": "true",
+  "logoPath": "public/images",
+  "searchAction": "/search/",
+  "searchInputName": "q",
+  "logoAltText": "Department for Education",
+  "homeHref": "/",
+  "selectedNav": view,
+  "service": {
+    "name": "Manage and maintain education estates",
+    "serviceUrl": "/"
+  },
+  "headerActionLinks": [
+    {
+      "url"  : "/",
+      "label" : "Signed in as [User name]"
+    },
+    {
+      "url"  : "/",
+      "label" : "Sign out"
+    }
+  ]
+})
+}}
+
+
+
+<div class="dfe-content-page--header govuk-!-padding-2" style="background-color:#EAF2F6;">
+  <div class="dfe-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">Folkestone Academy, Cambridge</h2>
+        <h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-0" style="font-weight: 400;">Part of Turner Schools</h3>
+        
+      </div>
+      <div class="govuk-grid-column-one-thirds" style="padding-top: 20px;">
+        <a href="change-school.html">Change school</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+{% block content %}
+
+
+<div class="dfe-width-container">
+  <div class="govuk-grid-row">
+
+
+
+    <div class="dfe-grid-column-three-quarters" style="margin-bottom: 40px;">
+
+      <h2 class="govuk-heading-l">Condition data for your school</h2>
+
+      <img src="public/images/cdc-graph-wireframe.png" width="640">
+
+      <div class="govuk-grid-row" style="margin-top:20px;">
+
+        <div style="border: solid, 1px; padding: 12px; margin-right: 12px;" class="dfe-grid-column-one-quarter">
+          <p>Band A</p>
+          <p><strong class="govuk-tag govuk-tag--red">Poor</strong></p>
+        </div>
+        
+        <div style="border: solid, 1px; padding: 12px;" class="dfe-grid-column-one-quarter">
+        <p>Band B</p>
+        <p><strong class="govuk-tag">Satisfactory</strong></p>
+        </div>
+      
+      </div>
+
+    </div>
+
+    
+
+    <div class="dfe-grid-column-one-quarters">
+
+      
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Compare school condition"
+      }) }}
+
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+  <div class="dfe-grid-column-three-quarters">
+    <!-- Recommendations should come off the back of the pre-questionnaire conducted by CDC surveyors -->
+     
+
+    <div class="govuk-grid-row">
+      <h3 class="govuk-heading-s">Recommendations</h3>
+      
+      <div class="govuk-grid-row" style="border: solid, 1px; margin-bottom: 20px; padding: 12px;">
+        <strong class="govuk-tag govuk-tag--red" style="margin-right: 16px; margin-bottom: 16px;">
+          High priority
+        </strong>
+        
+        <p class="dfe-body">You don't have the appropriate documentation</p>
+        
+        <a style="margin-bottom: 0px;">
+          <p>Document your estate's vision, mission and strategy</p>
+        </a>
+      
+      </div>
+        
+    </div>
+
+    <div class="govuk-grid-row">
+      <h3 class="govuk-heading-s">Recommendations</h3>
+      
+      <div class="govuk-grid-row" style="border: solid, 1px; margin-bottom: 20px; padding: 12px;">
+        <strong class="govuk-tag govuk-tag--orange" style="margin-right: 16px; margin-bottom: 16px;">
+          Medium priority
+        </strong>
+        
+        <p class="dfe-body">You are due to commission a professional condition survey</p>
+        
+        <a style="margin-bottom: 0px;">
+          <p>Conduct a professional condition survey</p>
+        </a>
+      
+      </div>
+        
+    </div>
+  
+  
+  </div>
+  
+</div>
+
+</div>
+
+{% endblock %}
