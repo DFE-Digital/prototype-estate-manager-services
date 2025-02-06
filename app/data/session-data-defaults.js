@@ -15,6 +15,14 @@ module.exports = {
         "pageBlurb":"Advice for schools and responsible bodies to help manage their school buildings and land.",
         "heading1" : "[Content coming soon]",
         "heading2" : "[Content coming soon]"
+      },
+      
+      "pageTools": {
+        "tool1": "x",
+        "tool2": "x",
+        "tool3": "x",
+        "tool4": "x"
+
       }
 
     },
@@ -590,7 +598,27 @@ module.exports = {
     }
 
 
+  ],
+
+  "schools" : [
+
+    {
+      "schoolURN" : "pending",
+      "schoolName" : "Folkestone Academy",
+      "schoolLocation": "Cambridge",
+      "schoolPartOf": "Turner Schools",
+      "schoolConditionTag": "Satisfactory",
+      "schoolConditionDate": "CDC2: May 2023",
+
+      "schoolPriorities": [
+        {
+        "priority1": "Lorem ipsum",
+        "priority2": "Lorem ipsum"
+        }
+      ] 
+    }  
   ]
+
 
 }
 
