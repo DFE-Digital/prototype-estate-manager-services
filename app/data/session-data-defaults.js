@@ -13,7 +13,12 @@ module.exports = {
       "pageContent" : {
 
         "pageBlurb":"Advice for schools and responsible bodies to help manage their school buildings and land.",
-        "heading1" : "[Content coming soon]",
+        "heading1" : "Use your Condition Data Collection (CDC) report to better understand your estate",
+        "heading1Paragraph": "The Condition Data Collection programme is the data gathered by visits made to every government-funded school in England to collect data about the condition of their buildings. Condition data can help you manage your estate and develop strategic and maintenance plans. You can read guidance about the CDC programme.",
+        
+        "SignInToSeeCDC" : "Sign in to see your CDC data",
+        "Commission" : "Commission a professional survey",
+        
         "heading2" : "[Content coming soon]"
       },
       
