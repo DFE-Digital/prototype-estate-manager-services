@@ -1,54 +1,67 @@
 {% extends "layouts/sub-page.html" %}
 
-{% set pageName="Condition data" %}
+{% set pageName="Condition data for [School name]" %}
 
 {% block header %}
 
-{{ header({
-  "showNav": "true",
-  "showSearch": "true",
-  "showHeaderActionLinks": "true",
-  "logoPath": "public/images",
-  "searchAction": "/search/",
-  "searchInputName": "q",
-  "logoAltText": "Department for Education",
-  "homeHref": "/",
-  "selectedNav": view,
-  "service": {
-    "name": "Manage and maintain education estates",
-    "serviceUrl": "/"
-  },
-  "headerActionLinks": [
-    {
-      "url"  : "/",
-      "label" : "Signed in as [User name]"
-    },
-    {
-      "url"  : "/",
-      "label" : "Sign out"
-    }
-  ]
-})
-}}
+<nav class="dfe-topnav" name="{{serviceName}}">
 
+  <div class="govuk-width-container">
 
+      <div class="flex-nav">
+          <ul class="flex-left">
+              <li>
+                  <a href="/" id="services-tab"><i class="fa-brands fa-github" aria-hidden="true"></i>{{serviceName}}</a>
+              </li>
+          </ul>
+          
+          <ul class="flex-right">
+              <li>
+                <a href="#">Signed in as <strong>{{data.userName}}</strong></a>
+              </li>
 
-<div class="dfe-content-page--header govuk-!-padding-2" style="background-color:#EAF2F6;">
-  <div class="dfe-width-container">
-    <div class="dfe-grid-row">
-      <div class="dfe-grid-column-two-thirds">
-        <h2 class="govuk-heading-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">Folkestone Academy, Cambridge</h2>
-        <h3 class="govuk-heading-s govuk-!-margin-top-0 govuk-!-margin-bottom-0" style="font-weight: 400;">Part of Turner Schools</h3>
-        
+              <li>
+                <a href="#">Sign out</a>
+              </li> 
+          </ul>
+      
       </div>
-      <div class="dfe-grid-column-one-thirds" style="padding-top: 20px;">
-        <a href="change-school.html">Change school</a>
-      </div>
-    </div>
+      
+
   </div>
-</div>
+    
 
 
+</nav>
+
+<nav class="dfe-topnav" style="background-color:#EAF2F6;">
+
+  <div class="govuk-width-container" >
+
+      <div class="flex-nav">
+          <ul class="flex-left">
+            <li>
+              <a style="color: black; font-size: 20px; font-weight: 800;">{{school.schoolName}}</a>
+            </li>
+            <li>
+              <a style="color: black; font-size: 20px; font-weight: 400;">{{school.schoolLocation}}</a>
+            </li>
+          </ul>
+          
+          <ul class="flex-right">
+              <li>
+                <a style="color: black;" href="../school-page-template">Change school</a>
+              </li> 
+          </ul>
+      
+      </div>
+      
+
+  </div>
+    
+
+
+</nav>
 
 {% endblock %}
 

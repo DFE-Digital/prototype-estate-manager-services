@@ -60,7 +60,7 @@ router.get('/schools/:schoolURN', (req, res) => {
 
     console.log(school)
 
-    res.render('school-page-template.html', {
+    res.render('cdc-page-template.html', {
         school
     })
 })
