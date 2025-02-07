@@ -1,0 +1,56 @@
+Test{% extends "layouts/sub-page.html" %}
+
+{% set pageName="School page template" %}
+
+{% block header %}
+
+{{ header({
+  "showNav": "true",
+  "showSearch": "true",
+  "showHeaderActionLinks": "true",
+  "logoPath": "public/images",
+  "searchAction": "/search/",
+  "searchInputName": "q",
+  "logoAltText": "Department for Education",
+  "homeHref": "/",
+  "selectedNav": view,
+  "service": {
+    "name": "Manage and maintain education estates",
+    "serviceUrl": "/"
+  },
+  "headerActionLinks": [
+    {
+      "url"  : "/",
+      "label" : "Signed in as [User name]"
+    },
+    {
+      "url"  : "/",
+      "label" : "Sign out"
+    }
+  ]
+})
+}}
+
+
+
+<div class="dfe-content-page--header govuk-!-padding-2" style="background-color:#EAF2F6;">
+  <div class="dfe-width-container">
+    <div class="dfe-grid-row">
+      
+        <div class="dfe-grid-column-two-thirds">
+          <h2 class="govuk-heading-s govuk-!-margin-top-2 govuk-!-margin-bottom-2">Turner Schools Trust</h2>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+{% for school in data.schools %}
+<h2 class="govuk-heading-s govuk-!-margin-top-2 govuk-!-margin-bottom-2">{{data.schools | dump}}</h2>
+{% endfor %}
+
+
+
+{% endblock %}
+
+
