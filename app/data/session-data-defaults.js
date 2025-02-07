@@ -13,6 +13,7 @@ module.exports = {
     {
       "pageTitle" : "Understand the condition of your estate",
       "pageURL" : "understand-the-condition",
+      "shortLifecycleStageName" : "Understand",
       "pageContent" : {
 
         "pageBlurb":"Advice for schools and responsible bodies to help manage their school buildings and land.",
@@ -25,18 +26,14 @@ module.exports = {
         "heading2" : "[Content coming soon]"
       },
       
-      "pageTools": {
-        "tool1": "x",
-        "tool2": "x",
-        "tool3": "x",
-        "tool4": "x"
-
-      }
+      "pageTools": [ "tool1", "tool2", "tool3" ],
+      "pageSubPages": [ "See CDC data", "Upload condition report", "Upload condition report" ]
 
     },
     {
       "pageTitle" : "Plan your estates maintenance and improvements",
       "pageURL" : "plan-your-estates",
+      "shortLifecycleStageName" : "Plan",
       "pageContent" : {
         "pageBlurb":"[Content coming soon]",
         "heading1" : "[Content coming soon]",
@@ -47,6 +44,7 @@ module.exports = {
     {
       "pageTitle" : "Get funding to implement your plan",
       "pageURL" : "get-funding",
+      "shortLifecycleStageName" : "Fund",
       "pageContent" : {
         "pageBlurb":"[Content coming soon]",
         "heading1" : "[Content coming soon]",
@@ -57,6 +55,7 @@ module.exports = {
     {
       "pageTitle" : "Commission and oversee construction and maintenance work",
       "pageURL" : "commission-and-oversee",
+      "shortLifecycleStageName" : "Commission",
       "pageContent" : {
         "pageBlurb":"[Content coming soon]",
         "heading1" : "[Content coming soon]",
@@ -67,6 +66,7 @@ module.exports = {
     {
       "pageTitle" : "Report spending and activities",
       "pageURL" : "report-spending-and-activities",
+      "shortLifecycleStageName" : "Report",
       "pageContent" : {
         "pageBlurb":"[Content coming soon]",
         "heading1" : "Know your legal responsiblities",
