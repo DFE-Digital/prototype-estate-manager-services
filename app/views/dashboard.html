@@ -47,37 +47,68 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
+<div class="dfe-width-container" style="margin: 0px;">
+  <div class="dfe-grid-row" style="margin: 0px;">
+
+    <div class="dfe-grid-column-one-quarter" style="margin: 0px; padding: 0px;">
+      
+      {% for lifeCycleContentPage in data.lifeCycleContentPages %}
+      
+      <nav class="dfe-vertical-nav" style="padding: 0px;">
+
+        <ul class="prototype-dashboard-vertical-nav">
+          <li>
+            <a href="?{{lifeCycleContentPage.shortLifecycleStageName}}" style="text-decoration: none;">
+              <h4 style="margin-bottom: 0px;">{{ lifeCycleContentPage.shortLifecycleStageName }}</h4>
+            </a>
+
+              <ul class="prototype-dashboard-vertical-nav">
+                <li>{{ lifeCycleContentPage.pageSubPages }}</li>
+                
+
+                <li>
+                  
+                  <a href="?{{lifeCycleContentPage.shortLifecycleStageName.pageTools}}" style="text-decoration: none;">
+                    <p class="govuk-body" style="margin-bottom: 0px;">
+                      Tools and resources
+                    </p>
+                  </a>
+
+                </li>
+
+                <li>
+                  
+                  <p class="govuk-body" style="margin-bottom: 0px;">
+                    Guidance
+                  </p>
+
+              </li>
+
+              </ul>
+          </li>
+        </ul>
+
+      </nav>
+      
+      {% endfor %}
+    </div>
+
+    <div class="dfe-grid-column-three-quarters">
+
+      <p class="govuk-body">[Page content coming soon]</p>
+      <h4>Tools and resources</h4>
+
+      {% for lifeCycleContentPage in data.lifeCycleContentPages %}
+
+      {{ lifeCycleContentPage.pageTools }}
+
+      {% endfor %}
+      
+
+    </div>
   
 
-  <div class="govuk-grid-column-two-thirds">
-    
-    <h1 class="dfe-heading-s">
-      Schools in your trust
-    </h1>
-
-    {% for school in data.schools %}
-    
-    <a class="govuk" href="/schools/{{school.schoolURN}}">
-      <p class="dfe-body">
-        {{school.schoolName}}
-      </p>
-    </a>
-    {% endfor %}
   </div>
-  
 </div>
 
-
-
-
-<!--
-{% for school in data.schools %}
-<h2 class="govuk-heading-s govuk-!-margin-top-2 govuk-!-margin-bottom-2">{{data.schools | dump}}</h2>
-{% endfor %}
--->
-
-
 {% endblock %}
-
-
