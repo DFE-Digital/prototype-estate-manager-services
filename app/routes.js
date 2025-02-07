@@ -45,3 +45,22 @@ router.get('/tools-and-resources/:resourceURL', (req, res) => {
         resource
     })
 })
+
+
+// Schools pages
+router.get('/schools/:schoolURN', (req, res) => {
+    
+    const schools = req.session.data.schools
+
+    const schoolURN = req.params.schoolURN
+
+    const school = schools.find( (school) => {
+        return school.schoolURN === schoolURN
+    })
+
+    console.log(school)
+
+    res.render('school-page-template.html', {
+        school
+    })
+})
