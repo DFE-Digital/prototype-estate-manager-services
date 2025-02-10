@@ -1,0 +1,124 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home - Manage and maintain education estates" %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-s">Contents</h3>
+
+        
+      {% for lifeCycleContentPage in data.lifeCycleContentPages %}
+
+      <nav class="dfe-vertical-nav">
+
+        <ul class="dfe-vertical-nav__section">
+          <li class="dfe-vertical-nav__section-item">
+            <a class="dfe-vertical-nav__link" href="/content/{{lifeCycleContentPage.pageURL}}">
+              <h4 style="margin-bottom: 0px;">{{ lifeCycleContentPage.pageTitle }}</h4>
+            </a>
+          </li>
+        </ul>
+
+      </nav>
+      
+      {% endfor %}
+
+      </div>
+      
+      <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-grid-row">
+        
+          <h1 class="govuk-heading-m">Use this service to:</h1>
+          
+          <ol>
+            <li>
+              <p class="govuk-body">Understand the condition of your estate</p>
+            </li>
+            <li>
+              <p class="govuk-body">Plan your estates maintenance and improvements</p>
+            </li>
+            <li>
+              <p class="govuk-body">Get funding to implement your plan</p>
+            </li>
+            <li>
+              <p class="govuk-body">Commission and oversee construction and maintenance work</p>
+            </li>
+            <li>
+              <p class="govuk-body">Report spending and activities</p>
+            </li>
+          </ol>
+
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+      <div class="govuk-grid-row">
+
+        
+        <h2 class="govuk-heading-m">Your legal responsibilities</h2>
+
+        <p class="govuk-body">[Content pending]</p>
+        
+        <a class="govuk-link">
+          <p class="govuk-body">Know your legal responsibilities</p>
+        </a>
+
+      </div>
+
+
+      <hr class="govuk-section-break govuk-section-break--l">
+      
+      <div class="govuk-grid-row">
+        <h2 class="govuk-heading-m">News and policy updates</h2>
+      </div>
+
+      <div class="govuk-grid-row">
+        
+        <div class="govuk-grid-column-one-third" style="margin-right:12px; background-color: rgb(245, 229, 229); padding: 12px;">
+          <h4>CIF applications deadline</h4>
+          <p>Applications for 2026/27 Condition Improvement Fund will close on 16 February 2025.</p>
+          <p class="govuk-body-s">Published 01 January 2025</p>
+        </div>
+
+        <div class="govuk-grid-column-one-third" style="margin-right:12px; background-color: rgb(245, 229, 229); padding: 12px;">
+          <h4>CIF is open for applications</h4>
+          <p>Qualifying schools may now apply for Condition Improvement Fund.</p>
+          <p class="govuk-body-s">Published 01 November 2024</p>
+        </div>
+
+      </div>
+      
+      <hr class="govuk-section-break govuk-section-break--l">
+      <div class="govuk-grid-row">
+
+        <a class="govuk-link">
+          <p class="govuk-body">Read all news and policy updates</p>
+        </a>
+
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--l">
+      <div class="govuk-grid-row">
+        <h2 class="govuk-heading-m">Tools and resources</h2>
+
+        <p class="govuk-body">Tools to help schools, trusts, and other responsible bodies manage their school buildings and land.</p>
+        <a class="govuk-link">
+          <p class="govuk-body">Visit the resource library</p>
+        </a>
+
+      </div>
+
+      
+    </div>
+  </main>
+</div>
+
+  {% endblock %}
