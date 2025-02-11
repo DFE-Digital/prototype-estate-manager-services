@@ -47,6 +47,13 @@ router.get('/tools-and-resources/:resourceURL', (req, res) => {
 })
 
 
+router.post('/sign-in-to-dash/',(req, res) => {
+
+    const schools = req.session.data.schools
+    res.redirect('school-page-template.html')
+})
+
+
 // Schools pages
 router.get('/schools/:schoolURN', (req, res) => {
     

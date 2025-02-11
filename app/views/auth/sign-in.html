@@ -5,9 +5,38 @@
 {% block content %}
 
 
-    <h1 class="dfe-heading-s">Sign in using DfE Sign in</h1>
+<div class="dfe-width-container">
 
+    <div class="dfe-grid-row">
 
-    <a href="../dashboard">Sign in</a>
+        <div class="dfe-grid-column-two-thirds">
+
+            <h1 class="dfe-heading-xl">Department for Education Sign-in</h1>
+
+            <p class="govuk-body-l">Department for Education (DfE) Sign-in is how schools and other education
+                organisations access DfE online services.</p>
+            <p class="govuk-body">To access DfE online services, you'll either need:</p>
+
+            <ul>
+                <li>an existing DfE Sign-in account</li>
+                <li>to create a DfE Sign-in account if you haven't used DfE Sign-in before</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="dfe-grid-row" style="margin-top: 40px;">
+        <div class="dfe-grid-column-two-thirds">
+            <form action="/sign-in-to-dash" method="post" novalidate>
+                <input type="hidden" name="answers-checked" value="true">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Sign in
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
 
 {% endblock%}
