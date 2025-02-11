@@ -2,6 +2,15 @@
 
 {% set pageName="Sign in using DfE Sign in" %}
 
+{% block header %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "index",
+  serviceName: "DfE Sign In"
+}) }}
+{% endblock %}
+
 {% block content %}
 
 

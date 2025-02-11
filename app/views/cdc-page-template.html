@@ -4,40 +4,27 @@
 
 {% block header %}
 
-<nav class="dfe-topnav" name="{{serviceName}}">
+<nav class="app-subnav" style="background-color: #003a69; margin-bottom: 0px;">
+  <div class="dfe-width-container" style="margin-bottom: 0px;">
+    <div class="govuk-grid-row" style="margin-bottom: 0px;">
+      <table style="margin-bottom: 0px;">
+        <td>
+          <p class="govuk-body-s" style="color: #fff;">{{serviceName}}</p>
+        </td>
 
-  <div class="govuk-width-container">
+        <td style="text-align: right;">
+          <p class="govuk-body-s" style="color: #fff;">Signed in as <strong>{{data.userName}}</strong><a class="govuk-link" style="color: #fff; text-decoration: none;" href="../"> Sign out</a></p>
+        </td>
 
-    <div class="flex-nav">
-      <ul class="flex-left">
-        <li>
-          <a href="/" id="services-tab"><i class="fa-brands fa-github" aria-hidden="true"></i>{{serviceName}}</a>
-        </li>
-      </ul>
-
-      <ul class="flex-right">
-        <li>
-          <a href="#">Signed in as <strong>{{data.userName}}</strong></a>
-        </li>
-
-        <li>
-          <a href="../">Sign out</a>
-        </li>
-      </ul>
-
+    </table>
     </div>
-
-
   </div>
-
-
-
 </nav>
 
 <nav class="app-subnav">
   <div class="dfe-width-container">
     <div class="govuk-grid-row">
-      <table>
+      <table style="margin-bottom: 0px;">
         <td>
           <p class="govuk-body"><strong>{{school.schoolName}}</strong>&nbsp;{{school.schoolLocation}}</p>
         </td>
