@@ -1,4 +1,4 @@
-{% extends "layouts/sub-page.html" %}
+{% extends "layouts/cdc-page-template.html" %}
 
 {% set pageName="School page template" %}
 
@@ -20,7 +20,7 @@
               </li>
 
               <li>
-                <a href="#">Sign out</a>
+                <a href="../prototype-index">Sign out</a>
               </li> 
           </ul>
       
@@ -96,6 +96,7 @@
     <div class="dfe-grid-column-three-quarters">
 
       <p class="govuk-body">[Page content coming soon]</p>
+
       <h4>Tools and resources</h4>
 
       {% for lifeCycleContentPage in data.lifeCycleContentPages %}
@@ -106,6 +107,8 @@
       
 
     </div>
+
+
   
 
   </div>
