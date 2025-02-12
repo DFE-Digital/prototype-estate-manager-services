@@ -14,37 +14,46 @@
 {% block content %}
 
 <div class="dfe-grid-row">
+  
   <div class="dfe-grid-column-two-thirds">
 
 
     <h1 class="dfe-heading-xl">{{lifeCycleContentPage.pageTitle}}</h1>
 
-    
-    
-    
-
-    
-    
     <p class="govuk-body-l">{{lifeCycleContentPage.pageContent.pageBlurb}}</p>
-    <h5>{{lifeCycleContentPage.pageContent.heading1}}</h5>
-    <p class="govuk-body">{{lifeCycleContentPage.pageContent.heading1Paragraph}}</p>
-    <a href="../cdc-page-template">{{lifeCycleContentPage.pageContent.SignInToSeeCDC}}</a><br>
-    <a href="#">{{lifeCycleContentPage.pageContent.Commission}}</a>
-    
+    <ul class="govuk-list govuk-list--bullet">
 
-    <!--
-    <h5>{{lifeCycleContentPage.pageContent.heading2}}</h5>
-    
-    <h5>{{lifeCycleContentPage.pageContent.heading3}}</h5>
-    
-    <h5>{{lifeCycleContentPage.pageContent.heading4}}</h5>
-    
-    <a href="/content/{{ lifeCycleContentPage.pageURL }}"><p style="margin-bottom: 60px; margin-top: 0px;">Link</p></a>
-    -->
+      <li>
+        <p class="govuk-body">{{lifeCycleContentPage.pageContent.listItem1}}</p>
+      </li>
+      <li>
+        <p class="govuk-body">{{lifeCycleContentPage.pageContent.listItem2}}</p>
+      </li>
+      <li>
+        <p class="govuk-body">{{lifeCycleContentPage.pageContent.listItem3}}</p>
+      </li>
+    </ul>
+  
+  </div>
 
+  <div class="dfe-grid-column-one-third" style="background-color: aquamarine; padding: 12px;">
+    <h2 class="govuk-heading-l">{{lifeCycleContentPage.pageContent.subHeading1}}</h2>
+    <p class="govuk-body">{{lifeCycleContentPage.pageContent.paragraph1}}</p>
+  </div>
 
+</div>
 
+<div class="dfe-grid-row" style="margin-bottom: 20px; margin-top: 12px;">
+  <div class="dfe-grid-column-two-thirds" style="background-color: aquamarine; padding-right: 48px;">
+    <h2 class="govuk-heading-m">{{lifeCycleContentPage.pageContent.subHeading2}}</p>
   </div>
 </div>
+
+<div class="dfe-grid-row" style="margin-bottom: 20px; margin-top: 12px;">
+  <div class="dfe-grid-column-two-thirds" style="background-color: aquamarine; padding-right: 48px;">
+    X
+  </div>
+</div>
+
 
 {% endblock %}
