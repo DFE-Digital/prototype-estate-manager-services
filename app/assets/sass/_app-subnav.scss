@@ -8,7 +8,45 @@
     padding-bottom: 0px;
 }
 
-//.app-left-nav{
-//   background-color: rgb(198, 117, 11);
-//  display: inline-block;
-//}
+.app-left-nav {
+    color: black;
+    background-color: #EAF2F6;
+    display: inline-block;
+    margin-top: 0px;
+    margin-right: 40px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 48px;
+    height: 88vh;
+
+}
+
+.app-left-nav ul {
+
+    list-style-type: none;
+    margin:.2em;
+    padding: 0px;
+ 
+}
+
+ .app-left-nav li {
+    padding: 8px;
+    margin-bottom: 4px;
+    list-style-type: none;
+    
+ 
+}
+
+.app-left-nav li a, .app-left-nav li ul li a, .app-left-nav li p, .app-left-nav li ul li p, .app-left-nav li h4, .app-left-nav li ul li h4 {
+    text-decoration:none;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.app-left-nav li a:hover, .app-left-nav li ul li a:hover, .app-left-nav li p:hover, .app-left-nav li ul li p:hover, .app-left-nav li h4:hover, .app-left-nav li ul li h4:hover {
+    background-color: #c5d0d5;
+    
+}
