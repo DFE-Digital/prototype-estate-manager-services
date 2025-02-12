@@ -1,9 +1,43 @@
+'use strict';
+const excelToJson = require('convert-excel-to-json');
+const fs = require('fs');
+
+const result = excelToJson({
+  source: fs.readFileSync('ems-localisation.xlsx') // fs.readFileSync return a Buffer
+});
+
 module.exports = {
 
   // Insert values here
 
 
-  "userName":"Jane Doe",
+  "appServiceUsers": [
+
+    {
+      "firstName" : "Chris",
+      "lastName" : "Smith",
+      "userName": "Chris Smith",
+      "emailAddress" : "chrissmith@email.com"
+    },
+
+    {
+      "firstName" : "Alex",
+      "lastName" : "Jones",
+      "userName": "Alex Jones",
+      "emailAddress" : "alexjones@email.com"
+    },
+
+    {
+      "firstName" : "Ash",
+      "lastName" : "Doe",
+      "userName": "Ash Doe",
+      "emailAddress" : "ashdoe@email.com"
+    }
+
+
+  ],
+
+
   
   
   // LIFE CYCLE PAGES //
@@ -16,8 +50,8 @@ module.exports = {
       "shortLifecycleStageName" : "Understand",
       "pageContent" : {
 
-        "pageBlurb":"Advice for schools and responsible bodies to help manage their school buildings and land.",
-        "heading1" : "Use your Condition Data Collection (CDC) report to better understand your estate",
+        "pageBlurb":"In order to manage your estate you need to understand the condition of your estate. By understanding the condition you will be able to:<ul><li>develop a strategic long-term plan for your estate</li><li>have a maintenance plan for improvements</li><li>know what your funding options are</li></ul>",
+        "subHeading1" : "Know your legal responsibilities",
         "heading1Paragraph": "The Condition Data Collection programme is the data gathered by visits made to every government-funded school in England to collect data about the condition of their buildings. Condition data can help you manage your estate and develop strategic and maintenance plans. You can read guidance about the CDC programme.",
         
         "SignInToSeeCDC" : "Sign in to see your CDC data",
