@@ -16,9 +16,19 @@ module.exports = {
       "shortLifecycleStageName" : "Understand",
       "pageContent" : {
 
-        "pageBlurb":"Advice for schools and responsible bodies to help manage their school buildings and land.",
-        "heading1" : "Use your Condition Data Collection (CDC) report to better understand your estate",
-        "heading1Paragraph": "The Condition Data Collection programme is the data gathered by visits made to every government-funded school in England to collect data about the condition of their buildings. Condition data can help you manage your estate and develop strategic and maintenance plans. You can read guidance about the CDC programme.",
+        "pageBlurb":"In order to manage your estate you need to understand the condition of your estate. By understanding the condition you will be able to:",
+        "listItem1":"develop a strategic long-term plan for your estate",
+        "listItem2": "have a maintenance plan for improvements",
+        "listItem3": "know what your funding options are",
+
+        "subHeading1" : "Know your legal responsibilities",
+        "paragraph1": "You should understand your legal responsibilities when managing the condition of an estate.",
+
+        
+        "subHeading2" : "Use your Condition Data Collection (CDC) report to better understand your estate",
+        "subHeading2paragraph1": "The Condition Data Collection programme is the data gathered by visits made to every government-funded school in England to collect data about the condition of their buildings.",
+        "subHeading2paragraph2": "Condition data can help you manage your estate and develop strategic and maintenance plans. You can read guidance about the CDC programme.",
+        "subHeading2paragraph3": "Condition surveys should identify critical elements that might need further investigation. You should ensure that condition surveys include a suitably detailed assessment of your building’s structure, to identify possible structural problems and health and safety risks. This may include asbestos, RAAC (reinforced autoclaved aerated concrete) and other issues associated with older buildings.",
         
         "SignInToSeeCDC" : "Sign in to see your CDC data",
         "Commission" : "Commission a professional survey",
