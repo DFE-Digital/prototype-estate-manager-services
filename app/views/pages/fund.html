@@ -1,0 +1,201 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Understand the condition of your estate" %}
+
+{% block header %}
+
+
+{{ header({
+  "showNav": "true",
+  "showSearch": "true",
+  "showHeaderActionLinks": "true",
+  "logoPath": "public/images",
+  "searchAction": "/search/",
+  "searchInputName": "q",
+  "logoAltText": "Department for Education",
+  "homeHref": "/",
+  "selectedNav": view,
+  "service": {
+    "name": "Manage and maintain education estates",
+    "serviceUrl": "#"
+  },
+  "headerActionLinks": [
+    {
+      "url"  : "#",
+      "label" : "Sign out"
+    }
+  ],
+  "primaryLinks": [
+      {
+      "url"  : "homepage",
+      "label" : "Home"
+    },
+    
+    {
+      "url"  : "contact-us-for-support",
+      "label" : "Contact us for support"
+    },
+
+    {
+      "url"  : "report-an-emergency",
+      "label" : "Report an emergency"
+    }
+  ]
+})
+}}
+
+<nav class="app-subnav">
+  <div class="dfe-width-container">
+    <div class="govuk-grid-row">
+      <table style="margin-bottom: 0px;">
+        <td>
+          <p class="govuk-body"><strong>School name</strong>&nbsp;Location</p>
+        </td>
+
+        <td style="text-align: right;">
+          <p class="govuk-body"><a class="govuk-link" href="#">Change school</a></p>
+        </td>
+
+    </table>
+    </div>
+  </div>
+</nav>
+
+<div class="dfe-width-container">
+  <div class="govuk-grid-row">
+
+  
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+
+<!-- REPURPOSE THE BELOW -->
+
+{% block beforeContent %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+  }) }}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "../homepage"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+
+
+      <div class="govuk-grid-column-two-thirds">
+      
+        <!-- PAGE TITLE -->
+        <h1 class="govuk-heading-xl">View funding options to implement your plan</h1>
+        
+        <!-- PAGE BLURB -->
+        <p class="govuk-body-l">[Page blurb]</p>
+
+        
+        <!-- SUB HEADINGS & CONTENT -->
+        <h2 class="govuk-heading-m">Legal responsibilities around seeking funding options to implement your improvements</h2>
+        <p class="govuk-body">Every Responsible Body has legal duties to ensure that the buildings and grounds are safe, well-maintained, and suitable for students, staff, and visitors. The following responsibilities come from laws and regulations that must be followed, and best practice actions that will help you manage your estates effectively.</p>
+
+        <ul>
+          <li>Budget Prioritisation: Ensure that funding allocation considers estate risk assessments.</li>
+          <li>Procurement Compliance: Follow public sector procurement guidelines to ensure regularity, propriety, and value for money.</li>
+          <li>Capital and Revenue Budgets: Consider the full cost of occupying the estate and the long-term financial implications of investments.</li>
+          <li>Grant Applications: Align funding applications with legal and strategic estate management requirements.</li>
+          <li>Governance Oversight: Ensure governing boards oversee estate finances and have the necessary skills to support estate management decisions.</li>
+
+        </ul>
+        [fix spacing]
+
+        <h2 class="govuk-heading-m">[Sub heading for table]</h2>
+        
+        
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header" scope="col"> Name </th>
+              <th class="govuk-table__header" scope="col"> Status </th>
+              <th class="govuk-table__header" scope="col"> Type </th>
+              <th class="govuk-table__header" scope="col"> Funding </th>
+            </tr>
+          </thead>
+
+          <tbody class="govuk-table__body">
+
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a class="govuk-link" href="#">Condition improvement fund</a>
+              </td>
+
+              <td class="govuk-table__cell">
+                <a class="govuk-link" href="#">xxx</a>
+              </td>
+
+              <td class="govuk-table__cell">
+                <a class="govuk-link" href="#">xxx</a>
+              </td>
+        
+
+          
+          
+          <td>
+            <a class="govuk-link" href="#">Condition improvement fund</a>
+          </td>
+
+          <td>
+            <p class="govuk-body">PDF, X KB, X pages</p>
+          </td>
+        </table>
+
+
+      </div>
+
+
+      <!-- Use this section for the links -->
+      <div class="govuk-grid-column-one-third">
+
+        <h2 class="govuk-heading-s">Related guidance</h1>
+        <p class="govuk-body"><a href="#" class="govuk-link">Public Sector Decarbonisation Scheme</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">Heat and building strategy (accessible webpage)</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">Understanding and managing your land and buildings</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">The information you need to know about your estate</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">Net Capacity Assessment (NCA) programme</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">Performance management and sustainability</a></p>
+        
+
+      </div>
+
+    </div>
+
+
+
+  </main>
+</div>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/assets/js/dfefrontend.min.js"></script>
+{% endblock %}

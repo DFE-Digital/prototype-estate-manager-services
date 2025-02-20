@@ -33,11 +33,37 @@
 
         </div>
 
+        
+        <div class="dfe-grid-column-two-thirds" style="margin-top: 40px;">
+            {% from "govuk/components/input/macro.njk" import govukInput %}
+
+            {{ govukInput({
+            label: {
+                text: "Email address"
+            },
+            classes: "govuk-input--width-20",
+            id: "prototype-user-email-address",
+            name: "protoUserEmailAddress"
+            }) }}
+
+            {{ govukInput({
+                label: {
+                    text: "Password"
+                },
+                classes: "govuk-input--width-20",
+                id: "prototype-user-password",
+                name: "protoUserPassWord"
+                }) }}
+
+        </div>
+
+            
+
     </div>
 
     <div class="dfe-grid-row" style="margin-top: 40px;">
         <div class="dfe-grid-column-two-thirds">
-            <form action="/sign-in-to-dash" method="post" novalidate>
+            <form action="/sign-in-to-homepage" method="post" novalidate>
                 <input type="hidden" name="answers-checked" value="true">
                 <button type="submit" class="govuk-button" data-module="govuk-button">
                     Sign in
@@ -49,3 +75,4 @@
 </div>
 
 {% endblock%}
+
