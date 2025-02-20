@@ -1,6 +1,17 @@
+
+<!--
+
+1. DUPLICATE THIS PAGE
+2. Populate it with appropriate content
+3. Push changes to the test branch
+4. Create a pull request
+
+ -->
+
+
 {% extends "layouts/main.html" %}
 
-{% set pageName="XXXXXXX" %}
+{% set pageName="Understand the condition of your estate" %}
 
 {% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
 
@@ -188,6 +199,24 @@
       </div>
       
     </div>
+
+
+
+
+
+    <div>
+      {% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+  label: {
+    text: "What is the name of the event?"
+  },
+  id: "event-name",
+  name: "eventName"
+}) }}
+    </div>
+
+
   </main>
 </div>
 </div>

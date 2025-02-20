@@ -10,44 +10,43 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% block header %}
 
 {{ header({
-    "showNav": "true",
-    "showSearch": "true",
-    "showHeaderActionLinks": "true",
-    "logoPath": "public/images",
-    "searchAction": "/search/",
-    "searchInputName": "q",
-    "logoAltText": "Department for Education",
-    "homeHref": "/",
-    "selectedNav": "Home",
-    "service": {
-      "name": "Manage and maintain education estates",
-      "serviceUrl": "/"
+  "showNav": "true",
+  "showSearch": "true",
+  "showHeaderActionLinks": "true",
+  "logoPath": "public/images",
+  "searchAction": "/search/",
+  "searchInputName": "q",
+  "logoAltText": "Department for Education",
+  "homeHref": "/",
+  "selectedNav": view,
+  "service": {
+    "name": "Manage and maintain education estates",
+    "serviceUrl": "/"
+  },
+  "headerActionLinks": [
+    {
+      "url"  : "/",
+      "label" : "My account"
     },
-    "headerActionLinks": [
+    {
+      "url"  : "#",
+      "label" : "Sign out"
+    }
+  ],
+  "primaryLinks": [
       {
-        "url"  : "auth/sign-in",
-        "label" : "Sign in"
-      }
-    ],
-    "primaryLinks": [
-        {
-        "url"  : "/",
-        "label" : "Home"
-      },
-      {
-        "url"  : "tools-and-resources",
-        "label" : "Tools and resources"
-      }, {
-        "url"  : "news-and-policy-updates",
-        "label" : "News and policy updates"
-      },
-      {
-        "url"  : "contact-us-for-support",
-        "label" : "Contact us for support"
-      }
-    ]
-  })
+      "url"  : "homepage",
+      "label" : "Home"
+    },
+    
+    {
+      "url"  : "contact-us-for-support",
+      "label" : "Contact us for support"
+    }
+  ]
+})
 }}
+
 {% endblock %}
 
 {% block scripts %}

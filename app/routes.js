@@ -47,10 +47,10 @@ router.get('/tools-and-resources/:resourceURL', (req, res) => {
 })
 
 
-router.post('/sign-in-to-dash/',(req, res) => {
+router.post('/sign-in-to-homepage/',(req, res) => {
 
     const schools = req.session.data.schools
-    res.redirect('school-page-template.html')
+    res.redirect('homepage')
 })
 
 
