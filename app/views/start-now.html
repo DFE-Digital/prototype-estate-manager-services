@@ -1,78 +1,128 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% set pageName="Start now - Manage and maintain education estates" %}
+
+{% block header %}
+
+<!-- Change "selectedNav" if appropriate -->
+
+{{ header({
+  "showNav": "true",
+  "showSearch": "true",
+  "showHeaderActionLinks": "true",
+  "logoPath": "public/images",
+  "searchAction": "/search/",
+  "searchInputName": "q",
+  "logoAltText": "Department for Education",
+  "homeHref": "/",
+  
+  "selectedNav": view,
+
+  
+  "service": {
+    "name": "Manage and maintain education estates",
+    "serviceUrl": "#"
+  },
+  "headerActionLinks": [
+    {
+      "url"  : "auth/sign-in",
+      "label" : "Sign in"
+    }
+  ],
+  
+  
+  "primaryLinks": [
+      {
+      "url"  : "homepage",
+      "label" : "Home"
+    },
+    {
+      "url"  : "report-an-emergency",
+      "label" : "Report an emergency"
+    },
+    {
+      "url"  : "contact-us-for-support",
+      "label" : "Contact us for support"
+    }
+
+    
+  ]
+})
+}}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+  }) }}
+  
+{% endblock %}
 
 {% block content %}
 
-
-
 <div class="govuk-width-container">
 
-  <div class="dfe-grid-row">
+  <main class="govuk-main-wrapper">
 
-    <div class="dfe-grid-column-three-quarters">
-      <h1 class="dfe-heading-xl" style="margin-bottom: 12px;">
+    <div class="govuk-grid-row">
 
-        {{serviceName}}
 
-      </h1>
-      <p class="govuk-body-l">Managing your school estate effectively helps save money and keeps a healthy, safe and
-        sustainable school environment.</p>
+      <div class="govuk-grid-column-two-thirds">
 
-      <h2 class="dfe-heading-m" style="margin-bottom: 12px;">
-        This is a prototype
-      </h2>
+        <h1 class="dfe-heading-xl">Manage and maintain education estates</h1>
+        <p class="govuk-body-l">Managing your school estate effectively helps save money and keeps a healthy, safe and sustainable school environment.</p>
+        
+        <p class="govuk-body-l"><strong>[What the service offers OR what the value of using the service is]</strong></p>
+        <ul class="govuk-list govuk-list--bullet" style="margin-bottom: 28px;">
+          <li><p class="govuk-body">[Add key value]</p></li>
+          <li><p class="govuk-body">[Add key value]</p></li>
+          <li><p class="govuk-body">[Add key value]</p></li>
+        </ul>
 
-      <p class="govuk-body">It is currently being validated with <a href="#">future users of this service</a>. If you'd like to
-        get involved, <a href="#">please contact us</a>.</p>
+        <p class="govuk-body-l"><strong>[Who the service is for]</strong></p>
+        <ul class="govuk-list govuk-list--bullet" style="margin-bottom: 40px;">
+          <li><p class="govuk-body">[Add user type / person that can use the service]</p></li>
+          <li><p class="govuk-body">[Add user type / person that can use the service]</p></li>
+          <li><p class="govuk-body">[Add user type / person that can use the service]</p></li>
+        </ul>
 
-        <br>
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+          text: "Start now",
+          href: "auth/sign-in",
+          isStartButton: true
+        }) }}
+
+      </div>
+
+      <!-- Use this section for related guidance links -->
+      <div class="govuk-grid-column-one-third">
+
+        <h2 class="govuk-heading-s">Related guidance</h1>
+        <p class="govuk-body"><a href="#" class="govuk-link">[Link]</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">[Link]</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">[Link]</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">[Link]</a></p>
+
+      </div>
 
     </div>
 
-    <div class="dfe-grid-column-three-quarters">
+  </main>
 
+</div>
 
-      {% from "govuk/components/button/macro.njk" import govukButton %}
+{% endblock %}
 
-      {{ govukButton({
-        text: "Start now",
-        href: "auth/sign-in",
-        isStartButton: true
-      }) }}
-
-  </div>
-
-
-  
-
-    
-  </div>
-
-  </div>
-  </div>
-
-
-
-
-  <!--<iframe
-
-  height="450"
-  src="https://embed.figma.com/proto/bZUfr0UdaXP31q1hnBZAQs/Ed-Estates-%2F-Estate-Manager-Se[…]-id=5472%3A2797&show-proto-sidebar=1&hotspot-hints=0&hide-ui=1?embed-host=EstateManagerServices">
-  </iframe>-->
-
-
-
-
-
-
-
-
-
-
-              
-
-
-  <!--<p>{{data | dump}}</p>-->
-
-  {% endblock %}
+{% block scripts %}
+{{ super() }}
+<script src="/assets/js/dfefrontend.min.js"></script>
+{% endblock %}
