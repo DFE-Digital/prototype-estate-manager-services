@@ -1,0 +1,145 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName = "Manage and maintain education estates" %}
+
+{% block header %}
+{{ header({
+  "showNav": "true",
+  "showSearch": "true",
+  "showHeaderActionLinks": "true",
+  "logoPath": "public/images",
+  "searchAction": "/search/",
+  "searchInputName": "q",
+  "logoAltText": "Department for Education",
+  "homeHref": "/",
+  "selectedNav": view,
+  "service": {
+    "name": pageName,
+    "serviceUrl": "#"
+  },
+  "headerActionLinks": [
+  {
+    "label": "Signed in as Ed Stait"
+  },
+  {
+    "url": "#",
+    "label": "Sign out"
+  }
+  ],
+  "primaryLinks": [{
+    "url": "homepage",
+    "label": "Home"
+  }, {
+    "url": "contact-us-for-support",
+    "label": "Contact us for support"
+  }, {
+    "url": "report-an-emergency",
+    "label": "Report an emergency"
+  }]
+}) }}
+
+{# School selector navigation #}
+
+{% set selectedSchoolName = "Folkstone Academy" %}
+{% set selectedSchoolLocation = "Cambridge" %}
+
+
+<nav class="app-subnav" style="margin-bottom: 0px;">
+  <div class="dfe-width-container" style="margin-bottom: 0px;">
+    <div class="govuk-grid-row" style="margin-bottom: 0px;">
+      <div class="govuk-grid-column-full" style="margin-bottom: 0px;">
+        <div class="govuk-grid-row" style="margin-bottom: 0px;">
+          
+          <div class="govuk-grid-column-three-quarters"style="margin-bottom: 0px;">
+            <p class="govuk-body" style="margin-bottom: 6px; padding: 12px;"><strong>{{ selectedSchoolName }}</strong> {{ selectedSchoolLocation }}</p>
+          </div>
+          
+          <div class="govuk-grid-column-one-quarter" style="text-align: right;">
+            <p class="govuk-body" style="margin-bottom: 6px; padding: 12px;">
+              <a href="/v1/check-schools" class="govuk-link">Change school</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+{# Phase banner #}
+<div class="dfe-width-container">
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+  }) }}
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Welcome {{ data['user-name'] if data['user-name'] else 'Ed Stait' }}</h1>
+        
+        <p class="govuk-body-l">Use this service to access Funding, review your condition data from DfE, and explore available services, guidance, and support.</p>
+
+        {% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+        
+        {{ card({
+          cards: [{
+            "heading": "Know the condition of your estate",
+            "link": "pages/know-the-condition",
+            "imageCard": false,
+            "headingLevel": "3",
+            "linkCard": true,
+            "openInNewTab": false,
+            "description": "Understand our expectations and view the condition data we hold on your setting."
+          }, {
+            "heading": "Devise estates plan to prioritise maintenance / improvements",
+            "link": "pages/plan",
+            "imageCard": false,
+            "headingLevel": "3",
+            "linkCard": true,
+            "openInNewTab": false,
+            "description": "Create and manage estate maintenance and improvement plans."
+          }, {
+            "heading": "Get funding to implement your plan",
+            "link": "pages/fund",
+            "imageCard": false,
+            "headingLevel": "3",
+            "linkCard": true,
+            "openInNewTab": false,
+            "description": "Access available funding options."
+          }, {
+            "heading": "Commission and oversee construction / maintenance work",
+            "link": "pages/commission",
+            "imageCard": false,
+            "headingLevel": "3",
+            "linkCard": true,
+            "openInNewTab": false,
+            "description": "Manage construction and maintenance projects."
+          }, {
+            "heading": "Report on spending",
+            "link": "pages/report",
+            "imageCard": false,
+            "headingLevel": "3",
+            "linkCard": true,
+            "openInNewTab": false,
+            "description": "Report on estate management expenditure."
+          }]
+        }) }}
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/public/javascripts/dfefrontend.min.js"></script>
+  <script src="/public/javascripts/schools.js"></script>
+{% endblock %}

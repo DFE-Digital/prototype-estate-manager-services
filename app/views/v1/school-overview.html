@@ -1,0 +1,26 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">School overview</h1>
+    
+    {% if data['assigned-schools'].length === 1 %}
+      {# Show single school details #}
+      <h2 class="govuk-heading-m">{{ data['assigned-schools'][0].name }}</h2>
+    {% else %}
+      {# Show selected school details #}
+      {% set selectedSchool = null %}
+      {% for school in data['assigned-schools'] %}
+        {% if school.urn === data['selected-school'] %}
+          {% set selectedSchool = school %}
+        {% endif %}
+      {% endfor %}
+      
+      <h2 class="govuk-heading-m">{{ selectedSchool.name }}</h2>
+    {% endif %}
+    
+    {# Rest of your school overview content #}
+  </div>
+</div>
+{% endblock %}

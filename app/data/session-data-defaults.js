@@ -4,6 +4,119 @@ module.exports = {
 
 
   "userName":"Jane Doe",
+
+
+
+
+// Add user's assigned schools
+"assigned-schools": [
+
+  {
+    "urn" : "123456789",
+    "name" : "Folkestone Academy",
+    "schoolLocation": "Cambridge",
+    "schoolPartOf": "Turner Schools",
+    "schoolConditionTag": "Satisfactory",
+    "schoolConditionDate": "CDC2: May 2023",
+
+    "schoolPriorities": [
+      {
+      "priority1": "Lorem ipsum",
+      "priority2": "Lorem ipsum"
+      }
+    ] 
+  },
+  {
+    "urn" : "223456789",
+    "name" : "Aspen 2",
+    "schoolLocation": "Dover",
+    "schoolPartOf": "Turner Schools",
+    "schoolConditionTag": "[School condition tag]",
+    "schoolConditionDate": "CDC2: May 2023",
+
+    "schoolPriorities": [
+      {
+      "priority1": "Lorem ipsum",
+      "priority2": "Lorem ipsum"
+      }
+    ] 
+  },
+  {
+    "urn" : "323456789",
+    "name" : "Dover Christ Church Academy",
+    "schoolLocation": "Dover",
+    "schoolPartOf": "Turner Schools",
+    "schoolConditionTag": "[School condition tag]",
+    "schoolConditionDate": "CDC2: May 2023",
+
+    "schoolPriorities": [
+      {
+      "priority1": "Lorem ipsum",
+      "priority2": "Lorem ipsum"
+      }
+    ] 
+  },
+  {
+    "urn" : "423456789",
+    "name" : "Folkestone Primary",
+    "schoolLocation": "Folkstone",
+    "schoolPartOf": "Turner Schools",
+    "schoolConditionTag": "[School condition tag]",
+    "schoolConditionDate": "CDC2: May 2023",
+
+    "schoolPriorities": [
+      {
+      "priority1": "Lorem ipsum",
+      "priority2": "Lorem ipsum"
+      }
+    ] 
+  },
+  {
+    "urn" : "523456789",
+    "name" : "Turner Free School",
+    "schoolLocation": "[School location]",
+    "schoolPartOf": "Turner Schools",
+    "schoolConditionTag": "[School condition tag]",
+    "schoolConditionDate": "CDC2: May 2023",
+
+    "schoolPriorities": [
+      {
+      "priority1": "Lorem ipsum",
+      "priority2": "Lorem ipsum"
+      }
+    ] 
+  },
+  {
+    "urn" : "623456789",
+    "name" : "Morehall Primary School",
+    "schoolLocation": "[School location]",
+    "schoolPartOf": "Turner Schools",
+    "schoolConditionTag": "[School condition tag]",
+    "schoolConditionDate": "CDC2: May 2023",
+
+    "schoolPriorities": [
+      {
+      "priority1": "Lorem ipsum",
+      "priority2": "Lorem ipsum"
+      }
+    ] 
+  },
+  {
+    "urn" : "723456789",
+    "name" : "Martello Primary",
+    "schoolLocation": "[School location]",
+    "schoolPartOf": "Turner Schools",
+    "schoolConditionTag": "[School condition tag]",
+    "schoolConditionDate": "CDC2: May 2023",
+
+    "schoolPriorities": [
+      {
+      "priority1": "Lorem ipsum",
+      "priority2": "Lorem ipsum"
+      }
+    ] 
+  }  
+],
   
   
   // LIFE CYCLE PAGES //
@@ -616,115 +729,6 @@ module.exports = {
     }
 
 
-  ],
-
-  "schools" : [
-
-    {
-      "schoolURN" : "123456789",
-      "schoolName" : "Folkestone Academy",
-      "schoolLocation": "Cambridge",
-      "schoolPartOf": "Turner Schools",
-      "schoolConditionTag": "Satisfactory",
-      "schoolConditionDate": "CDC2: May 2023",
-
-      "schoolPriorities": [
-        {
-        "priority1": "Lorem ipsum",
-        "priority2": "Lorem ipsum"
-        }
-      ] 
-    },
-    {
-      "schoolURN" : "223456789",
-      "schoolName" : "Aspen 2",
-      "schoolLocation": "Dover",
-      "schoolPartOf": "Turner Schools",
-      "schoolConditionTag": "[School condition tag]",
-      "schoolConditionDate": "CDC2: May 2023",
-
-      "schoolPriorities": [
-        {
-        "priority1": "Lorem ipsum",
-        "priority2": "Lorem ipsum"
-        }
-      ] 
-    },
-    {
-      "schoolURN" : "323456789",
-      "schoolName" : "Dover Christ Church Academy",
-      "schoolLocation": "Dover",
-      "schoolPartOf": "Turner Schools",
-      "schoolConditionTag": "[School condition tag]",
-      "schoolConditionDate": "CDC2: May 2023",
-
-      "schoolPriorities": [
-        {
-        "priority1": "Lorem ipsum",
-        "priority2": "Lorem ipsum"
-        }
-      ] 
-    },
-    {
-      "schoolURN" : "423456789",
-      "schoolName" : "Folkestone Primary",
-      "schoolLocation": "Folkstone",
-      "schoolPartOf": "Turner Schools",
-      "schoolConditionTag": "[School condition tag]",
-      "schoolConditionDate": "CDC2: May 2023",
-
-      "schoolPriorities": [
-        {
-        "priority1": "Lorem ipsum",
-        "priority2": "Lorem ipsum"
-        }
-      ] 
-    },
-    {
-      "schoolURN" : "523456789",
-      "schoolName" : "Turner Free School",
-      "schoolLocation": "[School location]",
-      "schoolPartOf": "Turner Schools",
-      "schoolConditionTag": "[School condition tag]",
-      "schoolConditionDate": "CDC2: May 2023",
-
-      "schoolPriorities": [
-        {
-        "priority1": "Lorem ipsum",
-        "priority2": "Lorem ipsum"
-        }
-      ] 
-    },
-    {
-      "schoolURN" : "623456789",
-      "schoolName" : "Morehall Primary School",
-      "schoolLocation": "[School location]",
-      "schoolPartOf": "Turner Schools",
-      "schoolConditionTag": "[School condition tag]",
-      "schoolConditionDate": "CDC2: May 2023",
-
-      "schoolPriorities": [
-        {
-        "priority1": "Lorem ipsum",
-        "priority2": "Lorem ipsum"
-        }
-      ] 
-    },
-    {
-      "schoolURN" : "723456789",
-      "schoolName" : "Martello Primary",
-      "schoolLocation": "[School location]",
-      "schoolPartOf": "Turner Schools",
-      "schoolConditionTag": "[School condition tag]",
-      "schoolConditionDate": "CDC2: May 2023",
-
-      "schoolPriorities": [
-        {
-        "priority1": "Lorem ipsum",
-        "priority2": "Lorem ipsum"
-        }
-      ] 
-    }  
   ]
 
 

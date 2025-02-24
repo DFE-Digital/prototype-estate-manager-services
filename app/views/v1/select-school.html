@@ -1,0 +1,91 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+
+{{ header({
+  "showNav": "true",
+  "showSearch": "true",
+  "showHeaderActionLinks": "true",
+  "logoPath": "public/images",
+  "searchAction": "/search/",
+  "searchInputName": "q",
+  "logoAltText": "Department for Education",
+  "homeHref": "/",
+  "selectedNav": view,
+  "service": {
+    "name": pageName,
+    "serviceUrl": "#"
+  },
+  "headerActionLinks": [
+  {
+    "label": "Signed in as Ed Stait"
+  },
+  {
+    "url": "#",
+    "label": "Sign out"
+  }
+  ],
+  "primaryLinks": [{
+    "url": "homepage",
+    "label": "Home"
+  }, {
+    "url": "contact-us-for-support",
+    "label": "Contact us for support"
+  }, {
+    "url": "report-an-emergency",
+    "label": "Report an emergency"
+  }]
+}) }}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+  }) }}
+  
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form method="post">
+      {% set radioItems = [] %}
+      {% for school in data['assigned-schools'] %}
+        {% set radioItems = (radioItems.push({
+          value: school.urn,
+          text: school.name
+        }), radioItems) %}
+      {% endfor %}
+
+      {{ govukRadios({
+        idPrefix: "selected-school",
+        name: "selected-school",
+        fieldset: {
+          legend: {
+            text: "Select a school",
+            isPageHeading: true,
+            classes: "govuk-heading-l"
+          }
+        },
+        errorMessage: errorMessage and {
+          text: errorMessage
+        },
+        items: radioItems
+      }) }}
+
+      {{ govukButton({
+        text: "Continue",
+        href: "/v1/homepage"
+      }) }}
+    </form>
+  </div>
+</div>
+{% endblock %}

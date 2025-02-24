@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+
+
+<div class="govuk-width-container">
+
+  <div class="dfe-grid-row">
+
+    <div class="dfe-grid-column-three-quarters">
+      <h1 class="dfe-heading-xl" style="margin-bottom: 12px;">
+
+        {{serviceName}}
+
+      </h1>
+      <p class="govuk-body-l">Managing your school estate effectively helps save money and keeps a healthy, safe and
+        sustainable school environment.</p>
+
+      <h2 class="dfe-heading-m" style="margin-bottom: 12px;">
+        This is a prototype
+      </h2>
+
+      <p class="govuk-body">It is currently being validated with <a href="#">future users of this service</a>. If you'd like to
+        get involved, <a href="#">please contact us</a>.</p>
+
+        <br>
+
+    </div>
+
+    <div class="dfe-grid-column-three-quarters">
+
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "View latest version",
+          href: "prototype-index"
+        }) }}
+
+        {{ govukButton({
+          text: "Documentation and histories",
+          classes: "govuk-button--secondary",
+          href: "documentation"
+        }) }}
+      </div>
+
+  </div>
+
+
+  
+
+    
+  </div>
+
+  </div>
+  </div>
+
+
+
+
+  <!--<iframe
+
+  height="450"
+  src="https://embed.figma.com/proto/bZUfr0UdaXP31q1hnBZAQs/Ed-Estates-%2F-Estate-Manager-Se[…]-id=5472%3A2797&show-proto-sidebar=1&hotspot-hints=0&hide-ui=1?embed-host=EstateManagerServices">
+  </iframe>-->
+
+
+
+
+
+
+
+
+
+
+              
+
+
+  <!--<p>{{data | dump}}</p>-->
+
+  {% endblock %}
