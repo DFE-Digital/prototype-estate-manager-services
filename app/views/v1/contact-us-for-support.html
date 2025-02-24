@@ -1,102 +1,163 @@
-{% extends "layouts/sub-page.html" %}
 
-{% set pageName="Contact us for support" %}
+<!--
 
-{% from 'node_modules/dfe-frontend/packages/components/header/macro.njk' import header %}
+1. DUPLICATE THIS PAGE
+2. Populate it with appropriate content
+3. Push changes to the test branch
+4. Create a pull request
+
+ -->
+
+ {% extends "layouts/main.html" %}
+
+{% set pageName="Understand the condition of your estate" %}
 
 {% block header %}
 
+<!-- Change "selectedNav" if appropriate -->
+
 {{ header({
-    "showNav": "true",
-    "showSearch": "true",
-    "showHeaderActionLinks": "true",
-    "logoPath": "public/images",
-    "searchAction": "/search/",
-    "searchInputName": "q",
-    "logoAltText": "Department for Education",
-    "homeHref": "/",
-    "selectedNav": "Contact us for support",
-    "service": {
-      "name": "Manage and maintain education estates",
-      "serviceUrl": "/"
+  "showNav": "true",
+  "showSearch": "true",
+  "showHeaderActionLinks": "true",
+  "logoPath": "public/images",
+  "searchAction": "/search/",
+  "searchInputName": "q",
+  "logoAltText": "Department for Education",
+  "homeHref": "/",
+  
+  "selectedNav": view,
+
+  
+  "service": {
+    "name": "Manage and maintain education estates",
+    "serviceUrl": "../homepage"
+  },
+  "headerActionLinks": [
+    {
+      "url"  : "#",
+      "label" : "Sign out"
+    }
+  ],
+  
+  
+  "primaryLinks": [
+      {
+      "url"  : "homepage",
+      "label" : "Home"
     },
-    "headerActionLinks": [
-      {
-        "url"  : "/",
-        "label" : "Sign in"
-      }
-    ],
-    "primaryLinks": [
-        {
-        "url"  : "/",
-        "label" : "Home"
-      },
-      {
-        "url"  : "tools-and-resources",
-        "label" : "Tools and resources"
-      }, {
-        "url"  : "news-and-policy-updates",
-        "label" : "News and policy updates"
-      },
-      {
-        "url"  : "contact-us-for-support",
-        "label" : "Contact us for support"
-      }
-    ]
-  })
+    {
+      "url"  : "report-an-emergency",
+      "label" : "Report an emergency"
+    },
+    {
+      "url"  : "contact-us-for-support",
+      "label" : "Contact us for support"
+    }
+
+    
+  ]
+})
 }}
 
-<div class="dfe-content-page--header govuk-!-padding-bottom-4" style="background-color:#EAF2F6;">
+<nav class="app-subnav">
   <div class="dfe-width-container">
-    <div class="dfe-grid-row govuk-!-padding-top-7">
-      <div class="dfe-grid-column-two-thirds">
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-4">Contact us for support</h1>
-        <p class="govuk-body">[Content coming soon]</p>
-      </div>
+    <div class="govuk-grid-row">
+      <table style="margin-bottom: 0px;">
+        <td>
+          <p class="govuk-body"><strong>School name</strong>&nbsp;Location</p>
+        </td>
+
+        <td style="text-align: right;">
+          <p class="govuk-body"><a class="govuk-link" href="#">Change school</a></p>
+        </td>
+
+    </table>
     </div>
   </div>
+</nav>
+
+<div class="dfe-width-container">
+  <div class="govuk-grid-row">
+
+  
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+  }) }}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "../homepage"
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+
+
+      <div class="govuk-grid-column-two-thirds">
+
+        
+        <!-- PAGE TITLE: Lifecycle stage name -->
+
+        <h1 class="govuk-heading-xl">Contact us for support</h1>
+        <p class="govuk-body-l">You can use the DfE customer portal for enquiries, support or complaints.</p>
+
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+          text: "DfE Customer portal",
+          href: "#",
+          isStartButton: true
+        }) }}
+
+        <h2 class="govuk-heading-s">Other support</h2>
+        <p class="govuk-body">For enquiries about PFI contracts, you can email:</p>
+        <ul>
+          <li>private.finance@education.gov.uk</li>
+        </ul>
+        
+        <p class="govuk-body">For estate management support, you can access The Trust Network. The Trust Network is free and impartial, where estate managers can offer support to each other.</p>
+
+
+      </div>
+
+    </div>
+
+
+
+  </main>
 </div>
 
 {% endblock %}
 
-{% block content %}
 
 
-<div class="dfe-width-container">
-  <div class="dfe-grid-row">
-    <div class="dfe-grid-column-two-thirds">
-
-        <p class="govuk-body">
-          For general questions about education estate management or accessing resources, contact:
-        </p>
-        <ul>
-          <li>Email: estates.support@education.gov.uk</li>
-          <li>Phone: 0370 000 2288</li>
-        </ul>
-  
-        <p class="govuk-body">Available Monday to Friday, 9:00 am to 5:00 pm.</p>
-        <p class="govuk-body">If your enquiry is about Private Finance Initiative (PFI) contracts nearing their end, you can contact private.finance@education.gov.uk.</p>
-        <p class="govuk-body">You can also visit the DfE customer portal for enquiries, support or complaints.</p>
-        <a><p class="govuk-body">https://customerhelpportal.education.gov.uk/</p></a>
-    
-    </div>  
-  </div>
-</div>
-
-
-<div class="govuk-width-container">
-
-  <div class="dfe-grid-row">
-
-    <div class="dfe-grid-column-three-quarters">
-      
-      
-    
-    </div>
-
-    
-  </div>
-
-</div>
-
+{% block scripts %}
+  {{ super() }}
+  <script src="/assets/js/dfefrontend.min.js"></script>
 {% endblock %}
