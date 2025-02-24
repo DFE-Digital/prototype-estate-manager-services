@@ -1,0 +1,188 @@
+
+<!--
+
+1. DUPLICATE THIS PAGE
+2. Populate it with appropriate content
+3. Push changes to the test branch
+4. Create a pull request
+
+ -->
+
+ {% extends "layouts/main.html" %}
+
+{% set pageName="Understand the condition of your estate" %}
+
+{% block header %}
+
+<!-- Change "selectedNav" if appropriate -->
+
+{{ header({
+  "showNav": "true",
+  "showSearch": "true",
+  "showHeaderActionLinks": "true",
+  "logoPath": "public/images",
+  "searchAction": "/search/",
+  "searchInputName": "q",
+  "logoAltText": "Department for Education",
+  "homeHref": "/",
+  
+  "selectedNav": view,
+
+  
+  "service": {
+    "name": "Manage and maintain education estates",
+    "serviceUrl": "../homepage"
+  },
+  "headerActionLinks": [
+    {
+      "url"  : "#",
+      "label" : "Sign out"
+    }
+  ],
+  
+  
+  "primaryLinks": [
+      {
+      "url"  : "homepage",
+      "label" : "Home"
+    },
+    {
+      "url"  : "report-an-emergency",
+      "label" : "Report an emergency"
+    },
+    {
+      "url"  : "contact-us-for-support",
+      "label" : "Contact us for support"
+    }
+
+    
+  ]
+})
+}}
+
+<nav class="app-subnav">
+  <div class="dfe-width-container">
+    <div class="govuk-grid-row">
+      <table style="margin-bottom: 0px;">
+        <td>
+          <p class="govuk-body"><strong>School name</strong>&nbsp;Location</p>
+        </td>
+
+        <td style="text-align: right;">
+          <p class="govuk-body"><a class="govuk-link" href="#">Change school</a></p>
+        </td>
+
+    </table>
+    </div>
+  </div>
+</nav>
+
+<div class="dfe-width-container">
+  <div class="govuk-grid-row">
+
+  
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+
+{% block beforeContent %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+  }) }}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "../homepage"
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+
+
+      <div class="govuk-grid-column-two-thirds">
+
+        
+        <!-- PAGE TITLE: Lifecycle stage name -->
+
+        <h1 class="govuk-heading-xl">Plan your estate maintenance and improvements</h1>
+        <p class="govuk-body-l">You should plan ongoing maintenance and look at the key areas in your estate that need improvement.</p>
+
+        <!-- Legal responsibilities are documented in a word document -->
+        <h2 class="govuk-heading-m">Your legal responsibilities</h2>
+        <p class="govuk-body">You have legal duties to make sure that the buildings and grounds are:</p>
+        <ul>
+          <li>safe</li>
+          <li>well-maintained</li>
+          <li>suitable for students, staff, and visitors</li>
+        </ul>
+
+        <p class="govuk-body"><a class="govuk-link" href="#">Understand your legal responsibilities when planning your estates mainentance and improvements</a></p>
+        <p class="govuk-body"><a class="govuk-link" href="#">Competency framework</a></p>
+
+        <h2 class="govuk-heading-m">Getting started with your estates maintenance plan</h2>
+
+        <p class="govuk-body">Having a plan for your estates maintenance and improvements helps you manage the school's land and buildings effectively. This keeps a school's estate safe and well maintained, as well as supports educational needs and goals. It ensures you have the right plans, processes and documents in place.</p>
+        <ul>
+          <li><a class="govuk-link" href="#">Planning and organising your estate resources</a></li>
+          <li><a class="govuk-link" href="#">Benefits of strategic estate management</a></li>
+          <li><a class="govuk-link" href="#">Fundamentals of good estate management</a></li>
+          <li><a class="govuk-link" href="#">Strategic estate management</a></li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Health and safety of your estate</h2>
+        <p class="govuk-body">You should ensure the safety of pupils, staff and visitors by managing your statutory responsibilities and other health and safety issues in the school estate to minimise health and safety issues.</p>
+        <ul>
+          <li><a class="govuk-link" href="#">Asbestos guidance</a></li>
+          <li><a class="govuk-link" href="#">Health and safety guidance</a></li>
+        </ul>
+
+
+      </div>
+
+
+      <!-- Use this section for related guidance links -->
+      <div class="govuk-grid-column-one-third">
+
+        <h2 class="govuk-heading-s">Related guidance</h1>
+        <p class="govuk-body"><a href="#" class="govuk-link">Top 10 estate checks for boards</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">Maintaining your estate</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">Managing your estate projects</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">School water strategy (SWS) - business case & technical advisor recruitment</a></p>
+        
+      </div>
+
+    </div>
+
+
+
+  </main>
+</div>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/assets/js/dfefrontend.min.js"></script>
+{% endblock %}
