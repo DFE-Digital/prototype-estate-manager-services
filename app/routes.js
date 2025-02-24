@@ -7,67 +7,7 @@ const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
 // Add your routes here
+// Branching to version folders
+router.use('/v1', require('./views/v1/_routes'))
 
-const sessionDataDefaults = require('./data/session-data-defaults')
-
-// Content pages
-router.get('/content/:pageURL', (req, res) => {
-    
-    const lifeCycleContentPages = req.session.data.lifeCycleContentPages
-
-    const pageURL = req.params.pageURL
-
-    const lifeCycleContentPage = lifeCycleContentPages.find( (lifeCycleContentPage) => {
-        return lifeCycleContentPage.pageURL === pageURL
-    })
-
-    console.log(lifeCycleContentPage)
-
-    res.render('content-page-template.html', {
-        lifeCycleContentPage
-    })
-})
-
-// Resource pages
-router.get('/tools-and-resources/:resourceURL', (req, res) => {
-    
-    const resources = req.session.data.resources
-
-    const resourceURL = req.params.resourceURL
-
-    const resource = resources.find( (resource) => {
-        return resource.resourceURL === resourceURL
-    })
-
-    console.log(resource)
-
-    res.render('resource-page-template.html', {
-        resource
-    })
-})
-
-
-router.post('/sign-in-to-homepage/',(req, res) => {
-
-    const schools = req.session.data.schools
-    res.redirect('homepage')
-})
-
-
-// Schools pages
-router.get('/schools/:schoolURN', (req, res) => {
-    
-    const schools = req.session.data.schools
-
-    const schoolURN = req.params.schoolURN
-
-    const school = schools.find( (school) => {
-        return school.schoolURN === schoolURN
-    })
-
-    console.log(school)
-
-    res.render('cdc-page-template.html', {
-        school
-    })
-})
+module.exports = router

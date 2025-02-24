@@ -1,0 +1,146 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName = "Manage and maintain education estates" %}
+
+{% block header %}
+{{ header({
+  "showNav": "true",
+  "showSearch": "true",
+  "showHeaderActionLinks": "true",
+  "logoPath": "public/images",
+  "searchAction": "/search/",
+  "searchInputName": "q",
+  "logoAltText": "Department for Education",
+  "homeHref": "/",
+  "selectedNav": view,
+  "service": {
+    "name": pageName,
+    "serviceUrl": "#"
+  },
+  "headerActionLinks": [
+  {
+    "label": "Signed in as Ed Stait"
+  },
+  {
+    "url": "#",
+    "label": "Sign out"
+  }
+  ],
+  "primaryLinks": [{
+    "url": "homepage",
+    "label": "Home"
+  }, {
+    "url": "contact-us-for-support",
+    "label": "Contact us for support"
+  }, {
+    "url": "report-an-emergency",
+    "label": "Report an emergency"
+  }]
+}) }}
+
+{# School selector navigation #}
+<nav class="app-subnav">
+  <div class="dfe-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-three-quarters">
+            {% if data['selected-school'] %}
+              {% set selectedSchool = null %}
+              {% for school in data['assigned-schools'] %}
+                {% if school.urn === data['selected-school'] %}
+                  {% set selectedSchool = school %}
+                {% endif %}
+              {% endfor %}
+              <p class="govuk-body"><strong>{{ selectedSchool.name }}</strong> {{ selectedSchool.location }}</p>
+            {% elif data['assigned-schools'].length === 1 %}
+              <p class="govuk-body"><strong>{{ data['assigned-schools'][0].name }}</strong> {{ data['assigned-schools'][0].location }}</p>
+            {% endif %}
+          </div>
+          <div class="govuk-grid-column-one-quarter" style="text-align: right;">
+            <p class="govuk-body">
+              <a href="/v1/check-schools" class="govuk-link">Change school</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+{# Phase banner #}
+<div class="dfe-width-container">
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+  }) }}
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Welcome {{ data['user-name'] if data['user-name'] else 'Ed Stait' }}</h1>
+        
+        <p class="govuk-body-l">Use this service to access Funding, review your condition data from DfE, and explore available services, guidance, and support.</p>
+
+        {% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
+        
+        {{ card({
+          cards: [{
+            "heading": "Know the condition of your estate",
+            "link": "pages/know-the-condition",
+            "imageCard": false,
+            "headingLevel": "3",
+            "linkCard": true,
+            "openInNewTab": false,
+            "description": "Understand our expectations and view the condition data we hold on your setting."
+          }, {
+            "heading": "Devise estates plan to prioritise maintenance / improvements",
+            "link": "pages/plan",
+            "imageCard": false,
+            "headingLevel": "3",
+            "linkCard": true,
+            "openInNewTab": false,
+            "description": "Create and manage your estate maintenance and improvement plans."
+          }, {
+            "heading": "Get funding to implement your plan",
+            "link": "pages/fund",
+            "imageCard": false,
+            "headingLevel": "3",
+            "linkCard": true,
+            "openInNewTab": false,
+            "description": "Access available funding options and submit applications."
+          }, {
+            "heading": "Commission and oversee construction / maintenance work",
+            "link": "pages/commission",
+            "imageCard": false,
+            "headingLevel": "3",
+            "linkCard": true,
+            "openInNewTab": false,
+            "description": "Manage construction and maintenance projects from start to finish."
+          }, {
+            "heading": "Report on spending",
+            "link": "pages/report",
+            "imageCard": false,
+            "headingLevel": "3",
+            "linkCard": true,
+            "openInNewTab": false,
+            "description": "Track and report on your estate management expenditure."
+          }]
+        }) }}
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/public/javascripts/dfefrontend.min.js"></script>
+  <script src="/public/javascripts/schools.js"></script>
+{% endblock %}
