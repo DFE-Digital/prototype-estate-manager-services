@@ -39,26 +39,23 @@
 }) }}
 
 {# School selector navigation #}
-<nav class="app-subnav">
-  <div class="dfe-width-container">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-three-quarters">
-            {% if data['selected-school'] %}
-              {% set selectedSchool = null %}
-              {% for school in data['assigned-schools'] %}
-                {% if school.urn === data['selected-school'] %}
-                  {% set selectedSchool = school %}
-                {% endif %}
-              {% endfor %}
-              <p class="govuk-body"><strong>{{ selectedSchool.name }}</strong> {{ selectedSchool.location }}</p>
-            {% elif data['assigned-schools'].length === 1 %}
-              <p class="govuk-body"><strong>{{ data['assigned-schools'][0].name }}</strong> {{ data['assigned-schools'][0].location }}</p>
-            {% endif %}
+
+{% set selectedSchoolName = "Folkstone Academy" %}
+{% set selectedSchoolLocation = "Cambridge" %}
+
+
+<nav class="app-subnav" style="margin-bottom: 0px;">
+  <div class="dfe-width-container" style="margin-bottom: 0px;">
+    <div class="govuk-grid-row" style="margin-bottom: 0px;">
+      <div class="govuk-grid-column-full" style="margin-bottom: 0px;">
+        <div class="govuk-grid-row" style="margin-bottom: 0px;">
+          
+          <div class="govuk-grid-column-three-quarters"style="margin-bottom: 0px;">
+            <p class="govuk-body" style="margin-bottom: 6px; padding: 12px;"><strong>{{ selectedSchoolName }}</strong> {{ selectedSchoolLocation }}</p>
           </div>
+          
           <div class="govuk-grid-column-one-quarter" style="text-align: right;">
-            <p class="govuk-body">
+            <p class="govuk-body" style="margin-bottom: 6px; padding: 12px;">
               <a href="/v1/check-schools" class="govuk-link">Change school</a>
             </p>
           </div>
@@ -79,7 +76,9 @@
 </div>
 {% endblock %}
 
+
 {% block content %}
+
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
@@ -106,7 +105,7 @@
             "headingLevel": "3",
             "linkCard": true,
             "openInNewTab": false,
-            "description": "Create and manage your estate maintenance and improvement plans."
+            "description": "Create and manage estate maintenance and improvement plans."
           }, {
             "heading": "Get funding to implement your plan",
             "link": "pages/fund",
@@ -114,7 +113,7 @@
             "headingLevel": "3",
             "linkCard": true,
             "openInNewTab": false,
-            "description": "Access available funding options and submit applications."
+            "description": "Access available funding options."
           }, {
             "heading": "Commission and oversee construction / maintenance work",
             "link": "pages/commission",
@@ -122,7 +121,7 @@
             "headingLevel": "3",
             "linkCard": true,
             "openInNewTab": false,
-            "description": "Manage construction and maintenance projects from start to finish."
+            "description": "Manage construction and maintenance projects."
           }, {
             "heading": "Report on spending",
             "link": "pages/report",
@@ -130,7 +129,7 @@
             "headingLevel": "3",
             "linkCard": true,
             "openInNewTab": false,
-            "description": "Track and report on your estate management expenditure."
+            "description": "Report on estate management expenditure."
           }]
         }) }}
       </div>
