@@ -1,21 +1,10 @@
+{% extends "layouts/main.html" %}
 
-<!--
-
-1. DUPLICATE THIS PAGE
-2. Populate it with appropriate content
-3. Push changes to the test branch
-4. Create a pull request
-
- -->
-
- {% extends "layouts/main.html" %}
-
-{% set pageName="Understand the condition of your estate" %}
-
-{% block header %}
+{% set pageName="Plan your estate maintenance and improvements" %}
 
 <!-- Change "selectedNav" if appropriate -->
 
+{% block header %}
 {{ header({
   "showNav": "true",
   "showSearch": "true",
@@ -25,69 +14,61 @@
   "searchInputName": "q",
   "logoAltText": "Department for Education",
   "homeHref": "/",
-  
-  "selectedNav": view,
-
-  
+  "selectedNav": "Home",
   "service": {
-    "name": "Manage and maintain education estates",
-    "serviceUrl": "../homepage"
+    "name": pageName,
+    "serviceUrl": "#"
   },
   "headerActionLinks": [
-    {
-      "url"  : "#",
-      "label" : "Sign out"
-    }
+  {
+    "label": "Signed in as Ed Stait"
+  },
+  {
+    "url": "#",
+    "label": "Sign out"
+  }
   ],
-  
-  
-  "primaryLinks": [
-      {
-      "url"  : "homepage",
-      "label" : "Home"
-    },
-    {
-      "url"  : "report-an-emergency",
-      "label" : "Report an emergency"
-    },
-    {
-      "url"  : "contact-us-for-support",
-      "label" : "Contact us for support"
-    }
+  "primaryLinks": [{
+    "url": "homepage",
+    "label": "Home"
+  }, {
+    "url": "contact-us-for-support",
+    "label": "Contact us for support"
+  }, {
+    "url": "report-an-emergency",
+    "label": "Report an emergency"
+  }]
+}) }}
 
-    
-  ]
-})
-}}
+{# School selector navigation #}
 
-<nav class="app-subnav">
-  <div class="dfe-width-container">
-    <div class="govuk-grid-row">
-      <table style="margin-bottom: 0px;">
-        <td>
-          <p class="govuk-body"><strong>School name</strong>&nbsp;Location</p>
-        </td>
+{% set selectedSchoolName = "Folkstone Academy" %}
+{% set selectedSchoolLocation = "Cambridge" %}
 
-        <td style="text-align: right;">
-          <p class="govuk-body"><a class="govuk-link" href="#">Change school</a></p>
-        </td>
 
-    </table>
+<nav class="app-subnav" style="margin-bottom: 0px;">
+  <div class="dfe-width-container" style="margin-bottom: 0px;">
+    <div class="govuk-grid-row" style="margin-bottom: 0px;">
+      <div class="govuk-grid-column-full" style="margin-bottom: 0px;">
+        <div class="govuk-grid-row" style="margin-bottom: 0px;">
+          
+          <div class="govuk-grid-column-three-quarters"style="margin-bottom: 0px;">
+            <p class="govuk-body" style="margin-bottom: 6px; padding: 12px;"><strong>{{ selectedSchoolName }}</strong> {{ selectedSchoolLocation }}</p>
+          </div>
+          
+          <div class="govuk-grid-column-one-quarter" style="text-align: right;">
+            <p class="govuk-body" style="margin-bottom: 6px; padding: 12px;">
+              <a href="/v1/check-schools" class="govuk-link">Change school</a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
 
-<div class="dfe-width-container">
-  <div class="govuk-grid-row">
-
-  
-  </div>
-</div>
-
-
 
 {% endblock %}
-
 
 {% block beforeContent %}
 
@@ -100,13 +81,6 @@
     html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
   }) }}
 
-{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-
-{{ govukBackLink({
-  text: "Back",
-  href: "../homepage"
-}) }}
-
 {% endblock %}
 
 
@@ -114,7 +88,22 @@
 
 <div class="govuk-width-container">
 
-  <main class="govuk-main-wrapper">
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
+
+    {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+      {{ govukBreadcrumbs({
+          items: [
+            {
+              text: "Home",
+              href: "../homepage"
+            },
+            {
+              html: pageName,
+              href: "#"
+            }
+          ]
+        }) }}
 
     <div class="govuk-grid-row">
 

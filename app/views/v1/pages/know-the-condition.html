@@ -1,10 +1,10 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Understand the condition of your estate" %}
+{% set pageName="Know the condition of your estate" %}
+
+<!-- Change "selectedNav" if appropriate -->
 
 {% block header %}
-
-
 {{ header({
   "showNav": "true",
   "showSearch": "true",
@@ -14,66 +14,61 @@
   "searchInputName": "q",
   "logoAltText": "Department for Education",
   "homeHref": "/",
-  "selectedNav": view,
+  "selectedNav": "Home",
   "service": {
-    "name": "Manage and maintain education estates",
-    "serviceUrl": "../homepage"
+    "name": serviceName,
+    "serviceUrl": "#"
   },
   "headerActionLinks": [
-    {
-      "url"  : "#",
-      "label" : "Sign out"
-    }
+  {
+    "label": "Signed in as Ed Stait"
+  },
+  {
+    "url": "#",
+    "label": "Sign out"
+  }
   ],
-  "primaryLinks": [
-      {
-      "url"  : "homepage",
-      "label" : "Home"
-    },
-    
-    {
-      "url"  : "contact-us-for-support",
-      "label" : "Contact us for support"
-    },
+  "primaryLinks": [{
+    "url": "../homepage",
+    "label": "Home"
+  }, {
+    "url": "../contact-us-for-support",
+    "label": "Contact us for support"
+  }, {
+    "url": "../report-an-emergency",
+    "label": "Report an emergency"
+  }]
+}) }}
 
-    {
-      "url"  : "report-an-emergency",
-      "label" : "Report an emergency"
-    }
-  ]
-})
-}}
+{# School selector navigation #}
 
-<nav class="app-subnav">
-  <div class="dfe-width-container">
-    <div class="govuk-grid-row">
-      <table style="margin-bottom: 0px;">
-        <td>
-          <p class="govuk-body"><strong>School name</strong>&nbsp;Location</p>
-        </td>
+{% set selectedSchoolName = "Folkstone Academy" %}
+{% set selectedSchoolLocation = "Cambridge" %}
 
-        <td style="text-align: right;">
-          <p class="govuk-body"><a class="govuk-link" href="#">Change school</a></p>
-        </td>
 
-    </table>
+<nav class="app-subnav" style="margin-bottom: 0px;">
+  <div class="dfe-width-container" style="margin-bottom: 0px;">
+    <div class="govuk-grid-row" style="margin-bottom: 0px;">
+      <div class="govuk-grid-column-full" style="margin-bottom: 0px;">
+        <div class="govuk-grid-row" style="margin-bottom: 0px;">
+          
+          <div class="govuk-grid-column-three-quarters"style="margin-bottom: 0px;">
+            <p class="govuk-body" style="margin-bottom: 6px; padding: 12px;"><strong>{{ selectedSchoolName }}</strong> {{ selectedSchoolLocation }}</p>
+          </div>
+          
+          <div class="govuk-grid-column-one-quarter" style="text-align: right;">
+            <p class="govuk-body" style="margin-bottom: 6px; padding: 12px;">
+              <a href="/v1/check-schools" class="govuk-link">Change school</a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
 
-<div class="dfe-width-container">
-  <div class="govuk-grid-row">
-
-  
-  </div>
-</div>
-
-
 
 {% endblock %}
-
-
-<!-- REPURPOSE THE BELOW -->
 
 {% block beforeContent %}
 
@@ -86,19 +81,27 @@
     html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
   }) }}
 
-{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-
-{{ govukBackLink({
-  text: "Back",
-  href: "../homepage"
-}) }}
-
 {% endblock %}
 
 {% block content %}
 <div class="govuk-width-container">
 
-  <main class="govuk-main-wrapper">
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
+
+    {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+      {{ govukBreadcrumbs({
+          items: [
+            {
+              text: "Home",
+              href: "../homepage"
+            },
+            {
+              html: pageName,
+              href: "#"
+            }
+          ]
+        }) }}
 
     <div class="govuk-grid-row">
 
@@ -108,7 +111,7 @@
         <h1 class="govuk-heading-xl">Understand the condition of your estate</h1>
         <p class="govuk-body-l">Helpful information to help you understand the condition of your estate</p>
 
-        <ul class="govuk-body govuk-list govuk-list--bullet"> class="govuk-body govuk-list govuk-list--bullet">
+        <ul class="govuk-body govuk-list govuk-list--bullet">
           <li>Understand your legal responsibilities when managing the condition of an estate</li>
           <li>How your condition impacts funding</li>
         </ul>
