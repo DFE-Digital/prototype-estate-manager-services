@@ -49,6 +49,36 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 {% endblock %}
 
+
+{% block footer %}
+  
+
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
+
+{{ govukFooter({
+  meta: {
+    items: [
+      {
+        href: "#",
+        text: "Privacy"
+      },
+      {
+        href: "#",
+        text: "Cookies"
+      },
+      {
+        href: "#",
+        text: "Accessibility statement"
+      },
+      {
+        href: "#",
+        text: "Contact us"
+      }
+    ]
+  }
+}) }}
+{% endblock %}
+
 {% block scripts %}
   {{ super() }}
   <script src="/assets/js/dfefrontend.min.js"></script>
