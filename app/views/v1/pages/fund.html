@@ -44,8 +44,10 @@
 
 {% block content %}
   <div class="govuk-width-container">
-    <main class="govuk-main-wrapper">
+    <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
+
       <div class="govuk-grid-row">
+        
         <div class="govuk-grid-column-two-thirds">
           <!-- PAGE TITLE -->
           <h1 class="govuk-heading-xl">See funding options for your estate</h1>
@@ -53,84 +55,208 @@
           <!-- PAGE BLURB -->
           <p class="govuk-body-l">[Page blurb]</p>
 
-          <!-- TABLE CAPTION MOVED ABOVE FILTERS -->
-          <h2 class="govuk-heading-m">Funding options</h2>
+          <!-- Funding table -->
 
-          <!-- FILTER FUNDING OPTIONS -->
-          <h3 class="govuk-heading-s">Filter funding options</h3>
-          <div class="govuk-grid-row">
-            <!-- Checkboxes Left -->
-            <div class="govuk-grid-column-one-half">
-              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="mat-option" type="checkbox" name="filterOptions" value="mat">
-                  <label class="govuk-label govuk-checkboxes__label" for="mat-option">
-                    Multi-academy trust (MAT)
-                  </label>
-                </div>
+              <!-- Filters widget -->
+              <div class="govuk-form-group" style="margin-top: 0px;">
+                <h2 class="govuk-heading-m" style="margin-bottom: 4px">Funding options (3)</h2>
+                <a href="#" class="govuk-link">Filter funding options</a>  
               </div>
-            </div>
-
-            <!-- Checkboxes Right -->
-            <div class="govuk-grid-column-one-half">
-              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="single-option" type="checkbox" name="filterOptions" value="single">
-                  <label class="govuk-label govuk-checkboxes__label" for="single-option">
-                    Single academy trust (SAT)
-                  </label>
+              
+              <div class="govuk-form-group">
+                
+                <div class="govuk-grid-column-one-half govuk-!-margin-top-1 govuk-!-margin-bottom-6" >
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-heading-s govuk-!-margin-bottom-1">
+                      Setting
+                    </legend>
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Multi-academy trust (MAT)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Single academy trust (SAT)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Local Authority (LA)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Voluntary Aided School
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
                 </div>
+
+                <div class="govuk-grid-column-one-half govuk-!-margin-top-1 govuk-!-margin-bottom-6" >
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-heading-s govuk-!-margin-bottom-1">
+                      Funding type
+                    </legend>
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Sustainability
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Emergency
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Technology
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Build and rebuild
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+
+                  <!-- Table -->
+                  <table class="govuk-table" style="margin-top: 30px;">
+                    
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Funding scheme</th>
+                        <th scope="col" class="govuk-table__header">Status</th>
+                        <th scope="col" class="govuk-table__header">Type</th>
+                        <th scope="col" class="govuk-table__header">Deadline for applications</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                    
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <a class="govuk-link" href="#" target="_blank">
+                            Condition improvement fund
+                          </a>
+                        </td>
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--blue">
+                            Open
+                          </strong>
+                        </td>
+                        <td class="govuk-table__cell">Allocation</td>
+                        <td class="govuk-table__cell">3 Feb 2025</td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell"> <a class="govuk-link" href="#" target="_blank">[Funding option link]</a></td>
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--blue">
+                            Open
+                          </strong>
+                        </td>
+                        <td class="govuk-table__cell">Allocation</td>
+                        <td class="govuk-table__cell">9 September 2025</td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell"> <a class="govuk-link" href="#" target="_blank">[Funding option link]</a></td>
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                        </td>
+                        <td class="govuk-table__cell">Fund</td>
+                        <td class="govuk-table__cell">17 Feb 2025</td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell"> <a class="govuk-link" href="#" target="_blank">[Funding option link]</a></td>
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                        </td>
+                        <td class="govuk-table__cell">Fund</td>
+                        <td class="govuk-table__cell">17 Feb 2025</td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell"> <a class="govuk-link" href="#" target="_blank">[Funding option link]</a></td>
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                        </td>
+                        <td class="govuk-table__cell">Fund</td>
+                        <td class="govuk-table__cell">17 Feb 2025</td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell"> <a class="govuk-link" href="#" target="_blank">[Funding option link]</a></td>
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                        </td>
+                        <td class="govuk-table__cell">Fund</td>
+                        <td class="govuk-table__cell">17 Feb 2025</td>
+                      </tr>
+
+                    </tbody>
+
+                  </table>
+                  
               </div>
-            </div>
-          </div>
 
-          <!-- Buttons -->
-          <div class="govuk-grid-row">
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <button type="button" class="govuk-button">Apply filters</button>
-                <a href="#" class="govuk-link" id="clearFilters">Clear filters</a>
-              </fieldset>
-            </div>
-          </div>
 
-          <!-- FUNDING TABLE -->
-          {% from "govuk/components/table/macro.njk" import govukTable %}
-          {{ govukTable({
-            caption: "Funding options",
-            firstCellIsHeader: true,
-            head: [
-              { text: "Funding scheme" },
-              { text: "Status" },
-              { text: "Type" },
-              { text: "Deadline for applications" }
-            ],
-            rows: [
-              [
-                { html: '<a href="/funding/condition-improvement-fund" class="govuk-link">Condition improvement fund</a>' },
-                { html: govukTag({ text: "Open", classes: "govuk-tag--green" }) },
-                { text: "Allocation" },
-                { text: "03 Feb 2025" }
-              ]
-            ]
-          }) }}
+                
+
         </div>
-
+        
         <!-- RELATED GUIDANCE LINKS -->
         <div class="govuk-grid-column-one-third">
           <h2 class="govuk-heading-s">Related guidance</h2>
-          <ul class="govuk-list">
-            <li><a href="#" class="govuk-link">Public Sector Decarbonisation Scheme</a></li>
-            <li><a href="#" class="govuk-link">Heat and Building Strategy (accessible webpage)</a></li>
-            <li><a href="#" class="govuk-link">Understanding and managing your land and buildings</a></li>
-            <li><a href="#" class="govuk-link">The information you need to know about your estate</a></li>
-            <li><a href="#" class="govuk-link">Net Capacity Assessment (NCA) programme</a></li>
-            <li><a href="#" class="govuk-link">Performance management and sustainability</a></li>
-          </ul>
+          
+          <p class="govuk-body"><a href="#" class="govuk-link">Public Sector Decarbonisation Scheme</a></p>
+          <p class="govuk-body"><a href="#" class="govuk-link">Heat and Building Strategy (accessible webpage)</a></p>
+          <p class="govuk-body"><a href="#" class="govuk-link">Understanding and managing your land and buildings</a></p>
+          <p class="govuk-body"><a href="#" class="govuk-link">The information you need to know about your estate</a></p>
+          <p class="govuk-body"><a href="#" class="govuk-link">Net Capacity Assessment (NCA) programme</a></p>
+          <p class="govuk-body"><a href="#" class="govuk-link">Performance management and sustainability</a></p>
+
         </div>
+        
       </div>
     </main>
   </div>
+
 {% endblock %}
 
 {% block scripts %}
