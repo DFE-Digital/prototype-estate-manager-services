@@ -12,9 +12,9 @@
   "searchInputName": "q",
   "logoAltText": "Department for Education",
   "homeHref": "/",
-  "selectedNav": view,
+  "selectedNav": "Home",
   "service": {
-    "name": pageName,
+    "name": serviceName,
     "serviceUrl": "#"
   },
   "headerActionLinks": [
@@ -27,13 +27,13 @@
   }
   ],
   "primaryLinks": [{
-    "url": "homepage",
+    "url": "./homepage",
     "label": "Home"
   }, {
-    "url": "contact-us-for-support",
+    "url": "./contact-us-for-support",
     "label": "Contact us for support"
   }, {
-    "url": "report-an-emergency",
+    "url": "./report-an-emergency",
     "label": "Report an emergency"
   }]
 }) }}
@@ -65,15 +65,20 @@
   </div>
 </nav>
 
-{# Phase banner #}
-<div class="dfe-width-container">
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
   {{ govukPhaseBanner({
     tag: {
       text: "Alpha"
     },
     html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
   }) }}
-</div>
+
 {% endblock %}
 
 
