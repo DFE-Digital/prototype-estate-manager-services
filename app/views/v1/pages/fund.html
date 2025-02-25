@@ -54,18 +54,18 @@
 
           <!-- PAGE BLURB -->
           <p class="govuk-body-l">[Page blurb]</p>
-
+          
           <!-- Funding table -->
+          
+          <!-- Filters widget -->
+          <div class="govuk-form-group" style="margin-top: 0px;">
+            <h2 class="govuk-heading-m" style="margin-bottom: 4px">Funding options (3)</h2>
+            <a href="#" class="govuk-link">Filter funding options</a>  
+          </div>
+          
+          <div class="govuk-form-group">
 
-              <!-- Filters widget -->
-              <div class="govuk-form-group" style="margin-top: 0px;">
-                <h2 class="govuk-heading-m" style="margin-bottom: 4px">Funding options (3)</h2>
-                <a href="#" class="govuk-link">Filter funding options</a>  
-              </div>
-              
-              <div class="govuk-form-group">
-                
-                <div class="govuk-grid-column-one-half govuk-!-margin-top-1 govuk-!-margin-bottom-6" >
+                <div class="govuk-grid-column-one-third govuk-!-margin-top-1 govuk-!-margin-bottom-6" >
                   <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-heading-s govuk-!-margin-bottom-1">
                       Setting
@@ -104,8 +104,10 @@
                     </div>
                   </fieldset>
                 </div>
-
-                <div class="govuk-grid-column-one-half govuk-!-margin-top-1 govuk-!-margin-bottom-6" >
+            
+                
+                
+                <div class="govuk-grid-column-one-third govuk-!-margin-top-1 govuk-!-margin-bottom-6" >
                   <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-heading-s govuk-!-margin-bottom-1">
                       Funding type
@@ -114,7 +116,7 @@
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Sustainability
+                          Emergency
                         </label>
                       </div>
                     </div>
@@ -122,7 +124,7 @@
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Emergency
+                          Sustainability
                         </label>
                       </div>
                     </div>
@@ -138,16 +140,50 @@
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Other
+                        </label>
+                      </div>
+                    </div>
+                    
+                  </fieldset>
+                </div>
+                
+                <div class="govuk-grid-column-one-third govuk-!-margin-top-1 govuk-!-margin-bottom-6" >
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-heading-s govuk-!-margin-bottom-1">
+                      [Policy pillar]
+                    </legend>
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Estate management
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Condition, resilience and decarbonisation
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
                           Build and rebuild
                         </label>
                       </div>
                     </div>
+                    
                   </fieldset>
                 </div>
-
-                  <!-- Table -->
-                  <table class="govuk-table" style="margin-top: 30px;">
-                    
+                
+                <!-- Table -->
+                <table class="govuk-table" style="margin-top: 30px;">
+                  
                     <thead class="govuk-table__head">
                       <tr class="govuk-table__row">
                         <th scope="col" class="govuk-table__header">Funding scheme</th>
