@@ -8,12 +8,15 @@
 
  -->
 
-{% extends "layouts/main.html" %}
+ {% extends "layouts/main.html" %}
 
 {% set pageName="Change the name of the page" %}
 
 {% block header %}
 
+<!-- Change "selectedNav" if appropriate -->
+
+{% block header %}
 {{ header({
   "showNav": "true",
   "showSearch": "true",
@@ -90,6 +93,10 @@
     html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
   }) }}
 
+{% endblock %}
+
+{% block beforeContent %}
+
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 
   {{ govukPhaseBanner({
@@ -152,15 +159,14 @@
 
 
       <!-- Use this section for related guidance links -->
+      <div class="govuk-grid-column-one-third">
 
-      <div class="govuk-grid-column-one-quarter">
-        <aside class="dfe-aside">
-          <h2 class="govuk-heading-m">Related guidance</h2>
-          <ul class="govuk-list govuk-list--spaced">
-            <li><a href="#" class="govuk-link">[Link]</a></li>
-            <li><a href="#" class="govuk-link">[Link]</a></li>
-          </ul>
-        </aside>
+        <h2 class="govuk-heading-s">Related guidance</h1>
+        <p class="govuk-body"><a href="#" class="govuk-link">[Link]</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">[Link]</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">[Link]</a></p>
+        <p class="govuk-body"><a href="#" class="govuk-link">[Link]</a></p>
+
       </div>
 
     </div>
