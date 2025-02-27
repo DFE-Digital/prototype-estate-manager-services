@@ -53,14 +53,12 @@
         <div class="govuk-grid-row" style="margin-bottom: 0px;">
           
           <div class="govuk-grid-column-three-quarters"style="margin-bottom: 0px;">
-            <p class="govuk-body" style="margin-bottom: 6px; padding: 12px;"><strong>{{ selectedSchoolName }}</strong> {{ selectedSchoolLocation }}</p>
+            <p class="govuk-body-s" style="margin-bottom: 6px; padding: 12px;"><span class="govuk-body-m" style="margin-right: 20px"><strong>{{ selectedSchoolName }}</strong></span><span style="margin-right: 20px">{{ selectedSchoolLocation }}</span><a href="/v1/check-schools" class="govuk-link">Change school</a></p>
           </div>
           
           <div class="govuk-grid-column-one-quarter" style="text-align: right;">
-            <p class="govuk-body" style="margin-bottom: 6px; padding: 12px;">
-              <a href="/v1/check-schools" class="govuk-link">Change school</a>
-            </p>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -81,13 +79,6 @@
     html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
   }) }}
 
-{% endblock %}
-
-{% block content %}
-<div class="govuk-width-container">
-
-  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
-
     {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
       {{ govukBreadcrumbs({
@@ -103,6 +94,12 @@
           ]
         }) }}
 
+        {% endblock %}
+        {% block content %}
+
+        <div class="govuk-width-container">
+
+          <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
     <div class="govuk-grid-row">
 
 
@@ -156,7 +153,7 @@
       <div class="govuk-grid-column-one-quarter">
 
         <aside class="dfe-aside">
-          <h2 class="govuk-heading-s">Related guidance</h2>
+          <h2 class="govuk-heading-m">Related guidance</h2>
           <ul class="govuk-list govuk-list--spaced">
             <li><a href="#" class="govuk-link">Public Sector Decarbonisation Scheme</a></li>
             <li><a href="#" class="govuk-link">Heat and Building Strategy (accessible webpage)</a></li>
