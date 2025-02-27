@@ -61,7 +61,6 @@
           <div class="govuk-grid-column-three-quarters"style="margin-bottom: 0px;">
             <p class="govuk-body-s" style="margin-bottom: 6px; padding: 12px;"><span class="govuk-body-m" style="margin-right: 20px"><strong>{{ selectedSchoolName }}</strong></span><span style="margin-right: 20px">{{ selectedSchoolLocation }}</span><a href="/v1/check-schools" class="govuk-link">Change school</a></p>
           </div>
-          
           <div class="govuk-grid-column-one-quarter" style="text-align: right;">
           </div>
         </div>
@@ -103,9 +102,6 @@
 {% endblock %}
 
 {% block content %}
-  <div class="govuk-width-container">
-    
-    <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
 
       <div class="govuk-grid-row">
         
@@ -118,15 +114,16 @@
           
           <!-- Funding table -->
           
-          <!-- Filters widget -->
-          <div class="govuk-form-group" style="margin-top: 0px;">
-            <h2 class="govuk-heading-m" style="margin-bottom: 4px">Funding options (3)</h2>
-            <a href="#" class="govuk-link">Filter funding options</a>  
-          </div>
-          
-          <div class="govuk-form-group">
-
-                <div class="govuk-grid-column-one-half govuk-!-margin-top-1 govuk-!-margin-bottom-6" >
+          <!-- Filters widget with summary card -->
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">
+                Funding options
+              </h2>
+            </div>
+            <div class="govuk-summary-card__content">
+              <div class="govuk-form-group">
+                <div class="govuk-grid-column-one-half govuk-!-margin-top-1" >
                   <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-heading-s govuk-!-margin-bottom-1">
                       Setting
@@ -168,7 +165,7 @@
             
                 
                 <!-- Probably worth discussing the order of these -->
-                <div class="govuk-grid-column-one-half govuk-!-margin-top-1 govuk-!-margin-bottom-6" >
+                <div class="govuk-grid-column-one-half govuk-!-margin-top-1" >
                   <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-heading-s govuk-!-margin-bottom-1">
                       Funding type
@@ -216,9 +213,11 @@
                     
                   </fieldset>
                 </div>
-                
+                </div>
+                </div>
+                </div>
                 <!-- Table -->
-                <table class="govuk-table" style="margin-top: 30px;">
+                <table class="govuk-table  govuk-!-margin-top-7">
                   
                     <thead class="govuk-table__head">
                       <tr class="govuk-table__row">
@@ -306,15 +305,9 @@
                   </table>
                   
               </div>
-
-
-                
-
-        </div>
         
         <!-- Related content LINKS -->
-        <div class="govuk-grid-column-one-quarter">
-
+        <div class="govuk-grid-column-one-third">
           <aside class="dfe-aside">
             <h2 class="govuk-heading-m">Related content</h2>
             <ul class="govuk-list govuk-list--spaced">
@@ -330,8 +323,6 @@
         </div>
         
       </div>
-    </main>
-  </div>
 
 {% endblock %}
 

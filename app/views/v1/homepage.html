@@ -51,14 +51,12 @@
         <div class="govuk-grid-row" style="margin-bottom: 0px;">
           
           <div class="govuk-grid-column-three-quarters"style="margin-bottom: 0px;">
-            <p class="govuk-body" style="margin-bottom: 6px; padding: 12px;"><strong>{{ selectedSchoolName }}</strong> {{ selectedSchoolLocation }}</p>
+            <p class="govuk-body-s" style="margin-bottom: 6px; padding: 12px;"><span class="govuk-body-m" style="margin-right: 20px"><strong>{{ selectedSchoolName }}</strong></span><span style="margin-right: 20px">{{ selectedSchoolLocation }}</span><a href="/v1/check-schools" class="govuk-link">Change school</a></p>
           </div>
           
           <div class="govuk-grid-column-one-quarter" style="text-align: right;">
-            <p class="govuk-body" style="margin-bottom: 6px; padding: 12px;">
-              <a href="/v1/check-schools" class="govuk-link">Change school</a>
-            </p>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -84,63 +82,71 @@
 
 {% block content %}
 
-<div class="govuk-width-container">
-  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Welcome {{ data['user-name'] if data['user-name'] else 'Ed Stait' }}</h1>
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">Welcome {{ data['user-name'] if data['user-name'] else 'Alex Smith' }}</h1>
         
-        <p class="govuk-body-l">Use this service to access Funding, review your condition data from DfE, and explore available services, guidance, and support.</p>
+        <p class="govuk-body-l govuk-!-margin-bottom-3">Use this service to:</p>
+
+        <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+          <li>access funding</li>
+          <li>review your condition data from DfE</li>
+          <li>explore available services, guidance, and support</li>
+        </ul>
 
         {% from 'node_modules/dfe-frontend/packages/components/card/macro.njk' import card %}
         
         {{ card({
           cards: [{
-            "heading": "Know the condition of your estate",
-            "link": "pages/know-the-condition",
+            "heading": "Understand the condition of your estate",
+            "link": "pages/understand-the-condition",
             "imageCard": false,
             "headingLevel": "3",
             "linkCard": true,
             "openInNewTab": false,
-            "description": "Understand our expectations and view the condition data we hold on your setting."
-          }, {
-            "heading": "Devise estates plan to prioritise maintenance / improvements",
+            "description": "Understand the condition of your estate to develop a strategic long-term plan for your estate and make maintenance plans."
+          }, 
+          {
+            "heading": "Plan your estate maintenance and improvements",
             "link": "pages/plan",
             "imageCard": false,
             "headingLevel": "3",
             "linkCard": true,
             "openInNewTab": false,
-            "description": "Create and manage estate maintenance and improvement plans."
-          }, {
-            "heading": "Get funding to implement your plan",
+            "description": "Plan ongoing maintenance and look at the key areas in your estate that need improvement."
+          }, 
+          {
+            "heading": "Explore the funding options for your estate",
             "link": "pages/fund",
             "imageCard": false,
             "headingLevel": "3",
             "linkCard": true,
             "openInNewTab": false,
-            "description": "Access available funding options."
-          }, {
-            "heading": "Commission and oversee construction / maintenance work",
+            "description": "Find out what sources of funding are available for capital projects and maintenance."
+          },
+          {
+            "heading": "Commission and oversee construction and maintenance work",
             "link": "pages/commission",
             "imageCard": false,
             "headingLevel": "3",
             "linkCard": true,
             "openInNewTab": false,
-            "description": "Manage construction and maintenance projects."
-          }, {
-            "heading": "Report on spending",
+            "description": "[Short description]"
+          }, 
+          {
+            "heading": "Report on spending and activities",
             "link": "pages/report",
             "imageCard": false,
             "headingLevel": "3",
             "linkCard": true,
             "openInNewTab": false,
-            "description": "Report on estate management expenditure."
-          }]
+            "description": "Report your estate's spending and activities to help you track the progress of your estate's maintenance and long-term, strategic plan."
+          }
+
+          ]
         }) }}
       </div>
     </div>
-  </main>
-</div>
 {% endblock %}
 
 {% block scripts %}
