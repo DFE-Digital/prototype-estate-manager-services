@@ -51,14 +51,12 @@
         <div class="govuk-grid-row" style="margin-bottom: 0px;">
           
           <div class="govuk-grid-column-three-quarters"style="margin-bottom: 0px;">
-            <p class="govuk-body" style="margin-bottom: 6px; padding: 12px;"><strong>{{ selectedSchoolName }}</strong> {{ selectedSchoolLocation }}</p>
+            <p class="govuk-body-s" style="margin-bottom: 6px; padding: 12px;"><span class="govuk-body-m" style="margin-right: 20px"><strong>{{ selectedSchoolName }}</strong></span><span style="margin-right: 20px">{{ selectedSchoolLocation }}</span><a href="/v1/check-schools" class="govuk-link">Change school</a></p>
           </div>
           
           <div class="govuk-grid-column-one-quarter" style="text-align: right;">
-            <p class="govuk-body" style="margin-bottom: 6px; padding: 12px;">
-              <a href="/v1/check-schools" class="govuk-link">Change school</a>
-            </p>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -84,10 +82,8 @@
 
 {% block content %}
 
-<div class="govuk-width-container">
-  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-grid-column-full">
         <h1 class="govuk-heading-xl">Welcome {{ data['user-name'] if data['user-name'] else 'Ed Stait' }}</h1>
         
         <p class="govuk-body-l">Use this service to access Funding, review your condition data from DfE, and explore available services, guidance, and support.</p>
@@ -139,8 +135,6 @@
         }) }}
       </div>
     </div>
-  </main>
-</div>
 {% endblock %}
 
 {% block scripts %}
