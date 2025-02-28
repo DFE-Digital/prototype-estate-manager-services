@@ -10,7 +10,9 @@
 
 {% extends "layouts/main.html" %}
 
-{% set pageName="Change the name of the page" %}
+
+{% set pageName="Estate managers standards framework" %}
+{% set subPageForStandardsName ="Condition of your estate" %}
 
 {% block header %}
 
@@ -23,7 +25,7 @@
   "searchInputName": "q",
   "logoAltText": "Department for Education",
   "homeHref": "/",
-  "selectedNav": view,
+  "selectedNav": "Home",
   "service": {
     "name": serviceName,
     "serviceUrl": "#"
@@ -94,10 +96,14 @@
       items: [
         {
           text: "Home",
-          href: "../homepage"
+          href: '#'
         },
         {
           html: pageName,
+          href: "#"
+        },
+        {
+          html: subPageForStandardsName,
           href: "#"
         }
       ]
@@ -113,16 +119,14 @@
       <div class="govuk-grid-column-two-thirds">
 
         
-        <!-- PAGE TITLE: Lifecycle stage name -->
+        <!-- Lifecycle Caption + Page title (Standards)  -->
 
-        <h1 class="govuk-heading-xl">[Life cycle stage]</h1>
-        <p class="govuk-body-l">[Page intro]</p>
+        <span class="govuk-caption-l">{{ pageName }}</span>
+        <h1 class="govuk-heading-l">{{ subPageForStandardsName }}</h1>
 
-        <!-- Legal responsibilities are documented in a word document -->
-        <h2 class="govuk-heading-m">Your legal responsibilities</h2>
-        <p class="govuk-body">[Copy from word doc]</p>
+        <!-- Page content here  -->
 
-        <h2 class="govuk-heading-m">[Add further subheadings as needed]</h2>
+        <p class="govuk-body-l">Informed and careful project planning can make sure you:</p>
 
 
       </div>
@@ -139,8 +143,8 @@
           </ul>
         </aside>
       </div>
-
-    </div>
+    
+    </div> <!-- THIS DIV CANNOT BE DELETED -->
 
 {% endblock %}
 

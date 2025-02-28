@@ -40,9 +40,9 @@
 
   {{ govukPhaseBanner({
     tag: {
-      text: "Alpha"
+      text: "Prototype"
     },
-    html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+    html: 'This is a prototype for a new service. Use the version history below.'
   }) }}
   
 {% endblock %}
@@ -58,47 +58,20 @@
 
       <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="dfe-heading-xl">Manage and maintain education estates</h1>
-        <p class="govuk-body-l">Managing your school estate effectively helps save money and keeps a healthy, safe and sustainable school environment.</p>
+        <h1 class="dfe-heading-xl">Prototype index page</h1>
+        <p class="govuk-heading-m">Current version:</p>
+        <p class="govuk-body-l"><a href="v1/start-now"><strong>Version 1:</strong> to be taken to testing March 4th - March 7th</p></a>
         
-        <p class="govuk-body-l"><strong>[What the service offers OR what the value of using the service is]</strong></p>
+        <p class="govuk-heading-s">Previous versions:</p>
+        
         <ul class="govuk-list govuk-list--bullet" style="margin-bottom: 28px;">
-          <li><p class="govuk-body">[Add key value]</p></li>
-          <li><p class="govuk-body">[Add key value]</p></li>
-          <li><p class="govuk-body">[Add key value]</p></li>
+          <li>
+            <p class="govuk-body" style="color: #505a5f;">Version 0 (initial draft): starting point to EMS's first Heroku prorotype</p>
+
+          </li>
         </ul>
-
-        <p class="govuk-body-l"><strong>[Who the service is for]</strong></p>
-        <ul class="govuk-list govuk-list--bullet" style="margin-bottom: 40px;">
-          <li><p class="govuk-body">[Add user type / person that can use the service]</p></li>
-          <li><p class="govuk-body">[Add user type / person that can use the service]</p></li>
-          <li><p class="govuk-body">[Add user type / person that can use the service]</p></li>
-        </ul>
-
-        {% from "govuk/components/button/macro.njk" import govukButton %}
-
-        {{ govukButton({
-          text: "Start now",
-          href: "auth/sign-in",
-          isStartButton: true
-        }) }}
 
       </div>
-
-            <!-- RELATED GUIDANCE LINKS -->
-            <div class="govuk-grid-column-one-quarter">
-
-              <aside class="dfe-aside">
-                <h2 class="govuk-heading-m">Related guidance</h2>
-                <ul class="govuk-list govuk-list--spaced">
-                  <li><a href="#" class="govuk-link">[Link]</a></li>
-                  <li><a href="#" class="govuk-link">[Link]</a></li>
-                  <li><a href="#" class="govuk-link">[Link]</a></li>            
-                  <li><a href="#" class="govuk-link">[Link]</a></li>
-                </ul>
-              </aside>
-      
-            </div>
 
     </div>
 
