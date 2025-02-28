@@ -79,6 +79,21 @@
     html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
   }) }}
 
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+  {{ govukBreadcrumbs({
+      items: [
+        {
+          text: "Home",
+          href: "../homepage"
+        },
+        {
+          html: pageName,
+          href: "#"
+        }
+      ]
+    }) }}
+
 {% endblock %}
 
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
@@ -106,39 +121,28 @@
         <!-- PAGE TITLE: Lifecycle stage name -->
 
         <h1 class="govuk-heading-l">Report spending and activities</h1>
-        <p class="govuk-body-l">You can report your estate's spending and activities to help you track the progress of your estate's maintenance and long-term, strategic plan.</p>
+        <p class="govuk-body">You can report your estate's spending and activities to help you track the progress of your estate's maintenance and long-term, strategic plan.</p>
 
-        <!-- STANDARDS HERE -->
-        <p class="govuk-body">Read our estate <a class="govuk-link" href="./standards/standards-report-spending">management standards framework</a> for more information.</p>
+        
 
-        <h2 class="govuk-heading-m">RAAC monitoring tool</h2>
-        <p class="govuk-body">When you are taking steps to confirm RAAC is present using a suitably qualified building professional, you should immediately inform the Department for Education using the <a href="#" class="govuk-link">DfE Structural Issues form</a>.</p>
-
+        
         <h2 class="govuk-heading-m">Capital spend survey</h2>
         <p class="govuk-body">You can report your use of School Condition Allocation (SCA) funding through the <a href="#" class="govuk-link">Capital Spend Survey (CSS) portal</a>.</p>
         
-        <h2 class="govuk-heading-m">Further Education (FE) Monitoring</h2>
-        <p class="govuk-body">[Content pending]</p>
-        
         <h2 class="govuk-heading-m">Condition Improvement Fund (CIF)</h2>
         <p class="govuk-body">You must report the progress of your application throughout its lifecycle through the <a href="#" class="govuk-link">Condition Improvement Fund (CIF) portal</a>.</p>
-
-
-      </div>
-
-
-      <!-- Related content LINKS -->
-      <div class="govuk-grid-column-one-third">
-
-        <aside class="dfe-aside">
-          <h2 class="govuk-heading-m">Related content</h2>
-          <ul class="govuk-list govuk-list--spaced">
-            <li><a href="#" class="govuk-link">[Add links]</a></li>
-          </ul>
-        </aside>
+        
+        <h2 class="govuk-heading-m">Further Education (FE) Monitoring</h2>
+        <p class="govuk-body">You can manage your Capital FE and post-16 projects and submit your monitoring returns through the FE Monitoring portal.</p>
+        
+        
+        <h2 class="govuk-heading-m">RAAC monitoring tool</h2>
+        <p class="govuk-body">When you are taking steps to confirm RAAC is present using a suitably qualified building professional, you should immediately inform the Department for Education using the <a href="#" class="govuk-link">DfE Structural Issues form</a>.</p>
 
       </div>
 
+
+      
     </div>
 
 {% endblock %}
