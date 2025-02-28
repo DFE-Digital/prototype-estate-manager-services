@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Know the condition of your estate" %}
+{% set pageName="Understand the condition of your estate" %}
 
 <!-- Change "selectedNav" if appropriate -->
 
@@ -53,7 +53,13 @@
         <div class="govuk-grid-row" style="margin-bottom: 0px;">
           
           <div class="govuk-grid-column-three-quarters"style="margin-bottom: 0px;">
-            <p class="govuk-body-s" style="margin-bottom: 6px; padding: 12px;"><span class="govuk-body-m" style="margin-right: 20px"><strong>{{ selectedSchoolName }}</strong></span><span style="margin-right: 20px">{{ selectedSchoolLocation }}</span><a href="/v1/check-schools" class="govuk-link">Change school</a></p>
+            <p class="govuk-body-s" style="margin-bottom: 6px; padding: 12px;">
+              <span class="govuk-body-m" style="margin-right: 20px">
+                <strong>{{ selectedSchoolName }}</strong>
+              </span>
+              <span style="margin-right: 20px">{{ selectedSchoolLocation }}</span>
+              <a href="/v1/check-schools" class="govuk-link">Change school</a>
+            </p>
           </div>
           
           <div class="govuk-grid-column-one-quarter" style="text-align: right;">
@@ -100,49 +106,54 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-xl">Understand the condition of your estate</h1>
+        <h1 class="govuk-heading-xl">
+          {{ pageName }}
+        </h1>
         
-        <p class="govuk-body-l">To help you manage your estate effectively, you should 
-          have policies and procedures in place to collect 
-          information about the condition of the estate and its 
-          land, buildings and property.
-        </p>
+        <p class="govuk-body-l">To manage your school estate effectively, you need a clear understanding of its condition.</p>
+        <p class="govuk-body-l">This will help you plan strategically, maintain and improve your buildings.</p>
         
-          <p class="govuk-body">This will help you:</p>
+          <p class="govuk-body">Estate management responsibilities include:</p>
 
           <ul class="govuk-body govuk-list govuk-list--bullet">
-            <li>plan strategically for the long term</li>
-            <li>maintain and improve your estate</li>
-            <li>explore funding options</li>
+            <li>carrying out regular condition surveys</li>
+            <li>completing statutory inspections and assessments</li>
+            <li>managing materials like asbestos safely</li>
+            <li>ensuring compliance with health, safety, and fire regulations</li>
+            <li>keeping an up-to-date asset register</li>
+            <li>understanding legal interests and land ownership</li>
           </ul>
 
         <p class="govuk-body">Read our estate <a class="govuk-link" href="#">management standards framework</a> for more information.</p>
 
           
-        <h2 class="govuk-heading-m">Commission a survey report</h2>
-        <p class="govuk-body">Understanding the condition of the estate helps you make informed 
-          decisions about its maintenance and helps with budgeting and estate 
-          planning.
+        <h2 class="govuk-heading-m">Commission a condition report</h2>
+        <p class="govuk-body">To understand the physical condition of buildings in your estate, you can 
+          commission your own a condition survey. Condition surveys help you:
         </p>
 
-        <p class="govuk-body">This is usually done by carrying out condition surveys.</p>
-        <p class="govuk-body">Condition surveys are technical assessments and should be done by 
-          qualified building professionals.</p>
-        <p class="govuk-body">They provide systematic, uniform and objective information on the state 
-          of the buildings.
-        </p>
-        <p class="govuk-body">To understand the condition of your estate, you can commission your own
-          survey.
-        </p>
-        <p class="govuk-body">You can use DfE approved suppliers to do this.</p>
+        <ul class="govuk-body govuk-list govuk-list--bullet">
+          <li>identify what work is needed to maintain the estate</li>
+          <li>consider how much works might cost</li>
+          <li>prioritise work within available funds</li>
+          <li>understand if the nature of the buildings change</li>
+        </ul>
 
-        
-        <h2 class="govuk-heading-m">Download your Condition Data Collection (CDC) 
-          reports
-        </h2>
-        <p class="govuk-body">CDC2 data will provide a comprehensive picture of the condition of the 
-          school estate in England. CDC2 will help:
-        </p>
+        <p class="govuk-body">You can use <a class="govuk-link" href="#">DfE approved suppliers</a>  do this.</p>
+
+        <h2 class="govuk-heading-m">Download your Condition Data Collection (CDC) reports</h2>
+        <p class="govuk-body">CDC2 data will provide a comprehensive picture of the condition of the school 
+          estate in England. CDC2 will help:</p>
+
+          <ul class="govuk-body govuk-list govuk-list--bullet">
+            <li>provide DfE with an up-to-date evidence base</li>
+            <li>inform future condition funding allocations</li>
+            <li>help prioritise investment in the school estate to where it is most needed</li>
+            <li>identify school buildings for inclusion in rebuilding programmes</li>
+            <li>responsible bodies, and their schools, benefit from capital allocations 
+              based on a consistent assessment across key elements of condition need</li>
+            <li>DfE target aggregated funding allocation at responsible body level</li>
+          </ul>
 
         <ul class="govuk-body govuk-list govuk-list--bullet">
           <li>provide DfE with an up-to-date evidence base</li>
@@ -157,10 +168,8 @@
         </ul>
 
         <p class="govuk-body">Learn more about the <a class="govuk-link" href="#">Condition Data Collection 2 (CDC2) programme</a>.</p>
-        
 
-
-
+        <!-- Condition data reports table -->
         <table>
           <td><img width="100px" src="/public/images/icon-png.png" alt=""></td>
           <td>
