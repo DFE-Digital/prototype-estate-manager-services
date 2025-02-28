@@ -1,0 +1,156 @@
+
+<!--
+
+1. DUPLICATE THIS PAGE
+2. Populate it with appropriate content
+3. Push changes to the test branch
+4. Create a pull request
+
+ -->
+
+{% extends "layouts/main.html" %}
+
+
+{% set pageName="Standards framework" %}
+{% set subPageForStandardsName ="Life cycle stage" %}
+
+{% block header %}
+
+{{ header({
+  "showNav": "true",
+  "showSearch": "true",
+  "showHeaderActionLinks": "true",
+  "logoPath": "public/images",
+  "searchAction": "/search/",
+  "searchInputName": "q",
+  "logoAltText": "Department for Education",
+  "homeHref": "/",
+  "selectedNav": "Home",
+  "service": {
+    "name": serviceName,
+    "serviceUrl": "#"
+  },
+  "headerActionLinks": [
+  {
+    "label": "Signed in as Ed Stait"
+  },
+  {
+    "url": "#",
+    "label": "Sign out"
+  }
+  ],
+  "primaryLinks": [{
+    "url": "#",
+    "label": "Home"
+  }, {
+    "url": "#",
+    "label": "Contact us for support"
+  }, {
+    "url": "#",
+    "label": "Report an emergency"
+  }]
+}) }}
+
+{# School selector navigation #}
+
+{% set selectedSchoolName = "Folkstone Academy" %}
+{% set selectedSchoolLocation = "Cambridge" %}
+
+
+<nav class="app-subnav" style="margin-bottom: 0px;">
+  <div class="dfe-width-container" style="margin-bottom: 0px;">
+    <div class="govuk-grid-row" style="margin-bottom: 0px;">
+      <div class="govuk-grid-column-full" style="margin-bottom: 0px;">
+        <div class="govuk-grid-row" style="margin-bottom: 0px;">
+          
+          <div class="govuk-grid-column-three-quarters"style="margin-bottom: 0px;">
+            <p class="govuk-body-s" style="margin-bottom: 6px; padding: 12px;"><span class="govuk-body-m" style="margin-right: 20px"><strong>{{ selectedSchoolName }}</strong></span><span style="margin-right: 20px">{{ selectedSchoolLocation }}</span><a href="/v1/check-schools" class="govuk-link">Change school</a></p>
+          </div>
+          
+          <div class="govuk-grid-column-one-quarter" style="text-align: right;">
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+  }) }}
+
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+  {{ govukBreadcrumbs({
+      items: [
+        {
+          text: "Home",
+          href: '#'
+        },
+        {
+          html: pageName,
+          href: "#"
+        },
+        {
+          html: subPageForStandardsName,
+          href: "#"
+        }
+      ]
+    }) }}
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+
+
+      <div class="govuk-grid-column-two-thirds">
+
+        
+        <!-- Lifecycle Caption + Page title (Standards)  -->
+
+        <span class="govuk-caption-l">{{ pageName }}</span>
+        <h1 class="govuk-heading-l">{{ subPageForStandardsName }}</h1>
+
+        <!-- Page content here  -->
+
+        <p class="govuk-body-l">Informed and careful project planning can make sure you:</p>
+
+
+      </div>
+
+
+      <!-- Use this section for Related content links -->
+
+      <div class="govuk-grid-column-one-third">
+        <aside class="dfe-aside">
+          <h2 class="govuk-heading-m">Related content</h2>
+          <ul class="govuk-list govuk-list--spaced">
+            <li><a href="#" class="govuk-link">[Link]</a></li>
+            <li><a href="#" class="govuk-link">[Link]</a></li>
+          </ul>
+        </aside>
+      </div>
+    
+    </div> <!-- THIS DIV CANNOT BE DELETED -->
+
+{% endblock %}
+
+
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/assets/js/dfefrontend.min.js"></script>
+{% endblock %}
