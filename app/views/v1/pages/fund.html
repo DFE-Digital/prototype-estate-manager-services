@@ -107,145 +107,139 @@
         
         <div class="govuk-grid-column-two-thirds">
           <!-- PAGE TITLE -->
-          <h1 class="govuk-heading-xl">Explore capital funding for your estate  </h1>
+          <h1 class="govuk-heading-l">Explore capital funding for your estate  </h1>
 
           <!-- PAGE BLURB -->
           <p class="govuk-body-l">You should explore what sources of funding are available for capital projects and maintenance and identify whether these are grants, loans or formula based funds.</p>
 
-          <!-- Responsibilities -->
-          <p class="govuk-body">Responsibilities include:</p>
-
-          <ul class="govuk-list govuk-list--bullet">
-            <li>carrying out regular condition surveys</li>
-            <li>completing statutory inspections and assessments</li>
-            <li>managing materials like asbestos safely</li>
-            <li>ensuring compliance with health, safety, and fire regulations</li>
-            <li>keeping an up-to-date asset register</li>
-            <li>understanding legal interests and land ownership</li>
-          </ul>
-
-          <p class="govuk-body">Read our estate <a class="govuk-link" href="#">management standards framework</a> for more information.</p>
-          
+          <h2 class="govuk-heading-m">Funding schemes</h2>
           <!-- FUNDING TABLE -->
-          
-          <!-- Filters widget with summary card -->
-          <div class="govuk-summary-card">
-            <div class="govuk-summary-card__title-wrapper">
-              <h2 class="govuk-summary-card__title">
-                Select the funding you want to see
-              </h2>
+
+          <div class="filter-container">
+            <div class="filter-header">
+               <div class="filter-header-clear-all-link">
+                  <span class="filter-text">Filter</span>
+               </div>
             </div>
-            <div class="govuk-summary-card__content">
-              <div class="govuk-form-group">
-                <div class="govuk-grid-column-one-half govuk-!-margin-top-1" >
-                  <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-heading-s govuk-!-margin-bottom-1">
-                      School type
-                    </legend>
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Multi-academy trust (MAT)
+            <div class="filter-content show" id="filterContent">
+            <!-- Phase of education -->
+               <div class="filter-section">
+                  <h3>Type of setting</h3>
+                  <!-- <p>Select the education stage for your school</p> -->
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" data-govuk-checkboxes-init="">
+                     <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="phase-primary" name="phase" type="checkbox" value="primary">
+                        <label class="govuk-label govuk-checkboxes__label" for="phase-primary">
+                           Multi-academy trust (MAT)
                         </label>
-                      </div>
-                    </div>
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Single academy trust (SAT)
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="phase-secondary" name="phase" type="checkbox" value="secondary">
+                        <label class="govuk-label govuk-checkboxes__label" for="phase-secondary">
+                           Single academy trust (SAT)
                         </label>
-                      </div>
-                    </div>
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Local Authority (LA)
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="phase-sixth-form" name="phase" type="checkbox" value="sixth-form">
+                        <label class="govuk-label govuk-checkboxes__label" for="phase-sixth-form">
+                           Local Authority (LA)
                         </label>
-                      </div>
-                    </div>
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Voluntary Aided School
-                        </label>
-                      </div>
-                    </div>
-                  </fieldset>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="phase-v-a-school" name="phase" type="checkbox" value="v-a-school">
+                      <label class="govuk-label govuk-checkboxes__label" for="phase-v-a-school">
+                         Voluntary Aided School
+                      </label>
+                   </div>
+                   <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="phase-f-e-college" name="phase" type="checkbox" value="f-e-college">
+                    <label class="govuk-label govuk-checkboxes__label" for="phase-f-e-college">
+                      Further Education (FE) Colleges
+                    </label>
+                 </div>
+                  </div>
+               </div>
+               <div class="filter-section">
+                <h3>Type of funding</h3>
+                <!-- <p>Select the education stage for your school</p> -->
+                <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                   <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="type-allocation" name="phase" type="radio" value="allocation">
+                      <label class="govuk-label govuk-radios__label" for="type-allocation">
+                         Allocation
+                      </label>
+                   </div>
+                   <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="type-grant" name="phase" type="radio" value="grant">
+                      <label class="govuk-label govuk-radios__label" for="type-grant">
+                         Grant
+                      </label>
+                   </div>
+                   <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="type-fund" name="phase" type="radio" value="fund">
+                      <label class="govuk-label govuk-radios__label" for="type-fund">
+                         Fund
+                      </label>
+                   </div>
                 </div>
-            
-                
-                <!-- Probably worth discussing the order of these -->
-                <div class="govuk-grid-column-one-half govuk-!-margin-top-1" >
-                  <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-heading-s govuk-!-margin-bottom-1">
-                      Funding purpose 
-                    </legend>
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Maintenance and improvements
-                        </label>
-                      </div>
-                    </div>
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Condition and resilience
-                        </label>
-                      </div>
-                    </div>
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Energy security
-                        </label>
-                      </div>
-                    </div>
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Sustainability
-                        </label>
-                      </div>
-                    </div>
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Urgent support
-                        </label>
-                      </div>
-                    </div>
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Technology
-                        </label>
-                      </div>
-                    </div>
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Other
-                        </label>
-                      </div>
-                    </div>
-                    
-                  </fieldset>
-                </div>
-                </div>
-                </div>
-                </div>
+             </div>
+                  <!-- Category -->
+                  <div class="filter-section">
+                     <h3>Purpose of funding</h3>
+                     <!-- <p>Choose your task category</p> -->
+                     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" data-govuk-checkboxes-init="">
+                        <div class="govuk-checkboxes__item">
+                           <input class="govuk-checkboxes__input" id="category-buildings" name="category" type="checkbox" value="buildings">
+                           <label class="govuk-label govuk-checkboxes__label" for="category-buildings">
+                              Maintenance and improvements
+                           </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                           <input class="govuk-checkboxes__input" id="category-finance" name="category" type="checkbox" value="finance">
+                           <label class="govuk-label govuk-checkboxes__label" for="category-finance">
+                              Condition and resilience
+                           </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                           <input class="govuk-checkboxes__input" id="category-funding" name="category" type="checkbox" value="funding">
+                           <label class="govuk-label govuk-checkboxes__label" for="category-funding">
+                              Energy security
+                           </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                           <input class="govuk-checkboxes__input" id="category-governance" name="category" type="checkbox" value="governance">
+                           <label class="govuk-label govuk-checkboxes__label" for="category-governance">
+                              Sustainability
+                           </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                           <input class="govuk-checkboxes__input" id="category-procurement" name="category" type="checkbox" value="procurement">
+                           <label class="govuk-label govuk-checkboxes__label" for="category-procurement">
+                              Urgent support
+                           </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                           <input class="govuk-checkboxes__input" id="category-pupils" name="category" type="checkbox" value="pupils">
+                           <label class="govuk-label govuk-checkboxes__label" for="category-pupils">
+                              Technology
+                           </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                           <input class="govuk-checkboxes__input" id="category-staff-and-hr" name="category" type="checkbox" value="staff-and-hr">
+                           <label class="govuk-label govuk-checkboxes__label" for="category-staff-and-hr">
+                              Other
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+                  </div>
+                  <div class="filter-controls-section">
+                    <div class="govuk-button-group">
+                    <button class="govuk-button apply-button-top-margin" onclick="applyFilters()">Apply filters</button>
+                    <a class="govuk-link clear-all-link" onclick="clearFilters()">Clear all</a>
+                  </div>
+                  </div>
+         </div> 
                 <!-- Table -->
                 <table class="govuk-table  govuk-!-margin-top-7">
                   
@@ -262,13 +256,13 @@
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell">
                           <a class="govuk-link" href="https://www.gov.uk/guidance/condition-improvement-fund" target="_blank">
-                            Condition improvement fund
+                            Condition Improvement Fund (CIF)
                           </a>
-                          <p class="govuk-body-s govuk-!-margin-top-1">CIF is paid directly to single academy trusts, small multi-academy trusts (MATs), small voluntary aided (VA) bodies and sixth-form colleges for capital funding.</p>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Eligible bodies can apply annually for capital funding from the Condition Improvement Fund (CIF) to address significant condition needs.</p>
                         </td>
 
                         <td class="govuk-table__cell">
-                          Allocation
+                          Grant
                         </td>
 
                         <td class="govuk-table__cell">
@@ -318,16 +312,16 @@
                           <strong class="govuk-tag govuk-tag--blue">
                             Open
                           </strong>
-                          <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 4 Apr 2025</p>
                         </td>
                       </tr>
 
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell">
-                          <a class="govuk-link" href="https://www.located.co.uk/net-zero-accelerator/" target="_blank">
-                            Institutes Of Technology (IOT)
+                          <a class="govuk-link" href="https://educationhub.blog.gov.uk/2024/10/the-national-education-nature-park-how-to-get-involved/" target="_blank">
+                            Education Nature Park
                           </a>
-                          <p class="govuk-body-s govuk-!-margin-top-1">IOT brings education and business closer together, encouraging collaboration between colleges, universities and business, to create unique partnerships which deliver world class technical education.</p>
+                          <p class="govuk-body-s govuk-!-margin-top-1">The National Education Nature Park is helping children and young people around the country connect to the natural world.</p>
                         </td>
 
                         <td class="govuk-table__cell">
@@ -338,16 +332,16 @@
                           <strong class="govuk-tag govuk-tag--blue">
                             Open
                           </strong>
-                          <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 4 Apr 2025</p>
                         </td>
                       </tr>
-                      
+
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell">
-                          <a class="govuk-link" href="https://www.gov.uk/government/publications/selective-schools-expansion-fund" target="_blank">
-                            Selective School Expansion Fund (SSEF)
+                          <a class="govuk-link" href="https://www.located.co.uk/net-zero-accelerator/" target="_blank">
+                            Net Zero Accelerator (NZA)
                           </a>
-                          <p class="govuk-body-s govuk-!-margin-top-1">SSEF supports the expansion of selective schools where they have plans to work with other local schools to increase access for disadvantaged pupils and to raise attainment.</p>
+                          <p class="govuk-body-s govuk-!-margin-top-1">NZA aims to create a service that funds and delivers decarbonisation initiatives across the education estate.</p>
                         </td>
 
                         <td class="govuk-table__cell">
@@ -358,12 +352,13 @@
                           <strong class="govuk-tag govuk-tag--blue">
                             Open
                           </strong>
-                          <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 1 May 2025</p>
                         </td>
                       </tr>
+
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell">
-                          <a class="govuk-link" href="https://assets.publishing.service.gov.uk/media/671661439242eecc6c849b65/Urgent_Capital_Support_-_How_to_apply.pdf" target="_blank">
+                          <a class="govuk-link" href="https://www.gov.uk/government/publications/selective-schools-expansion-fund" target="_blank">
                             Urgent Capital Support (UCS)
                           </a>
                           <p class="govuk-body-s govuk-!-margin-top-1">UCS provides funding assistance to address urgent building condition issues that threaten the closure of the whole, or a significant part of the school.</p>
@@ -377,421 +372,286 @@
                           <strong class="govuk-tag govuk-tag--blue">
                             Open
                           </strong>
-                          <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
                         </td>
                       </tr>
 
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://assets.publishing.service.gov.uk/media/5acdca9040f0b617df33575e/Strategic_school_improvement_fund-process_evaluation_of_round-1.pdf" target="_blank">
-                          Strategic School Improvement Capital Budget (SSICB)
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">SSICB provides funding for areas identified as most challenging when it comes to social mobility.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Fund
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--grey">
-                          Closed
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Due to open Autumn 2025</p>
-                      </td>
-                    </tr>
-                    
-                    
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.hse.gov.uk/reinforced-autoclaved-aerated-concrete/" target="_blank">
-                          Reinforced Autoclaved Aerated Concrete (RAAC)- Remediation (Grant based)
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">The RAAC grant provides funding for estates to create a management plan to manage and control RAAC.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-                    
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.gov.uk/government/publications/further-education-capital-transformation-fund" target="_blank">
-                          Sustainable Drainage Systems (SuDS)
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">SuDS helps schools build environmentally-friendly techniques to manage and control surface water runoff.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-                    
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.gov.uk/government/publications/further-education-capital-transformation-fund" target="_blank">
-                          Further Education Capital Transformation Fund (FECT)
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">The FECT helps upgrade and transform the FE college estate and significantly reduce the proportion of FE college estate not fit for purpose or in unsatisfactory condition.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-                    
-                                          <tr class="govuk-table__row">
-                                            <td class="govuk-table__cell">
-                                              <a class="govuk-link" href="https://www.gov.uk/government/publications/institutes-of-technology--2/institutes-of-technology" target="_blank">
-                                                Connect the Classroom (CTC)
-                                              </a>
-                                              <p class="govuk-body-s govuk-!-margin-top-1">Connect the classroom is a government-funded programme to improve internet speed in schools. This is done by upgrading wifi access points and network switches.</p>
-                                            </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-                    
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.gov.uk/government/publications/free-school-pre-opening-guide/free-schools-pre-opening-guide#:~:text=Opening%20a%20free%20school%20is,presumption%20free%20school%20projects" target="_blank">
-                          Building - Self delivered Free School projects
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">This will provide funding for opening a free school.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-                    
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.gov.uk/government/publications/school-rebuilding-programme/school-rebuilding-programme" target="_blank">
-                          Rebuilding - Self delivered SRP projects
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Carries out major rebuilding and refurbishment projects at school and sixth-form college buildings across England, with buildings prioritised according to their condition.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-                    
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.gov.uk/government/publications/high-needs-funding-arrangements-2024-to-2025/high-needs-funding-2024-to-2025-operational-guide" target="_blank">
-                          High needs allocation
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">High needs funding supports provision for pupils and students with SEND who require additional resources to participate in education and learning.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-                    
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.gov.uk/government/publications/basic-need-allocations" target="_blank">
-                          Basic need allocation - grant
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Basic need funding is money given to local authorities each year to help them fulfil their duty to make sure there are enough school places for children in their local area.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.gov.uk/government/publications/how-to-open-a-childrens-home/introduction-to-childrens-homes#:~:text=About%20secure%20children%27s%20homes/schools,before%20you%20apply%20to%20register" target="_blank">
-                          Secure Children's Homes (SCHs)
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">SCHs provides funding to a local authority, to provides homes for children, either as a short-term or more of a long term measure.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.gov.uk/government/publications/establishing-school-based-nursery-provision/establishing-school-based-nursery-provision" target="_blank">
-                          School Based Nurseries (SBNs)
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Estates will receive funding to help establish a new school-based nursery.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.gov.uk/government/publications/access-support-from-school-hubs/teaching-school-hubs" target="_blank">
-                          Teaching School Hubs
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Teaching School Hubs helps deliver evidence-based professional development to schools in a designated area of the country.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.gov.uk/government/publications/heat-networks-zoning-pilot" target="_blank">
-                          Low Carbon Heating - pilot
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Low Carbon Heating helps estate develop a consistent, standardised methodology to identify areas where heat networks are expected to provide the lowest cost, low carbon heat to buildings.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.gov.uk/government/collections/family-hubs-and-start-for-life-programme" target="_blank">
-                          Family Hubs Transformation
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Family Hubs Transformation aims to join up and enhance services delivered through transformed family hubs in local authority areas.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.gov.uk/government/publications/t-levels-capital-fund" target="_blank">
-                          T Level Capital Fund (TLCF) - Buildings and Facilities Improvement Grant (BIFG)
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">The TLCF is available to support eligible further education providers offering T Levels from September 2024.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-                    
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.gov.uk/government/publications/post-16-capacity-fund" target="_blank">
-                          Post-16 Capacity Fund (Post16CF)
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Post16CF gives estates capital investment to accommodate upcoming demographic increases in 16- to 19-year-olds.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-                    
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell">
-                        <a class="govuk-link" href="https://www.gov.uk/government/publications/rural-services-delivery-grant-determination-2024-to-2025/rural-services-delivery-grant-determination-2024-to-2025" target="_blank">
-                          Rural Services Delivery Grant
-                        </a>
-                        <p class="govuk-body-s govuk-!-margin-top-1">The Rural Services Delivery Grant provides un-ringfenced funding in recognition of the possible additional costs of delivering services in sparsely populated areas.</p>
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        Allocation
-                      </td>
-
-                      <td class="govuk-table__cell">
-                        <strong class="govuk-tag govuk-tag--blue">
-                          Open
-                        </strong>
-                        <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                      </td>
-                    </tr>
-
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell">
-                          <a class="govuk-link" href="https://www.gov.uk/guidance/condition-improvement-fund" target="_blank">
-                            Devolved Formula Capital (DFC)
-                          </a>
-                          <p class="govuk-body-s govuk-!-margin-top-1">The funding must be used for capital expenditure which will improve the condition of the school buildings and grounds.</p>
-                        </td>
-
-                        <td class="govuk-table__cell">
-                          Allocation
-                        </td>
-
-                        <td class="govuk-table__cell">
-                          <strong class="govuk-tag govuk-tag--blue">
-                            Open
-                          </strong>
-                          <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                        </td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell">
-                          <a class="govuk-link" href="https://www.gov.uk/guidance/condition-improvement-fund" target="_blank">
-                            Education Nature Park
-                          </a>
-                          <p class="govuk-body-s govuk-!-margin-top-1">The National Education Nature Park is helping children and young people around the country connect to the natural world.</p>
-                        </td>
-
-                        <td class="govuk-table__cell">
-                          Allocation
-                        </td>
-
-                        <td class="govuk-table__cell">
-                          <strong class="govuk-tag govuk-tag--blue">
-                            Open
-                          </strong>
-                          <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                        </td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell">
-                          <a class="govuk-link" href="https://www.gov.uk/guidance/condition-improvement-fund" target="_blank">
-                            Net Zero Accelerator (NZA)
-                          </a>
-                          <p class="govuk-body-s govuk-!-margin-top-1">NZA aims to create a service that funds and delivers decarbonisation initiatives across the education estate.</p>
-                        </td>
-
-                        <td class="govuk-table__cell">
-                          Allocation
-                        </td>
-
-                        <td class="govuk-table__cell">
-                          <strong class="govuk-tag govuk-tag--blue">
-                            Open
-                          </strong>
-                          <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
-                        </td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell">
-                          <a class="govuk-link" href="https://www.gov.uk/guidance/condition-improvement-fund" target="_blank">
+                          <a class="govuk-link" href="https://www.gov.uk/government/publications/institutes-of-technology--2/institutes-of-technology" target="_blank">
                             Institutes Of Technology (IOT)
                           </a>
                           <p class="govuk-body-s govuk-!-margin-top-1">IOT brings education and business closer together, encouraging collaboration between colleges, universities and business, to create unique partnerships which deliver world class technical education.</p>
                         </td>
 
                         <td class="govuk-table__cell">
-                          Allocation
+                          Grant
                         </td>
 
                         <td class="govuk-table__cell">
-                          <strong class="govuk-tag govuk-tag--blue">
-                            Open
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
                           </strong>
-                          <p class="govuk-body-s govuk-!-margin-top-1">Deadline for applications 31 Mar 2025</p>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Due to open Autumn 2025</p>
+                        </td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <a class="govuk-link" href="https://www.gov.uk/government/publications/selective-schools-expansion-fund" target="_blank">
+                            Selective School Expansion Fund (SSEF)
+                          </a>
+                          <p class="govuk-body-s govuk-!-margin-top-1">SSEF supports the expansion of selective schools where they have plans to work with other local schools to increase access for disadvantaged pupils and to raise attainment.</p>
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          Fund
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Due to open Summer 2025</p>
+                        </td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <a class="govuk-link" href="#" target="_blank">
+                            Sustainable Drainage Systems (SuDS)
+                          </a>
+                          <p class="govuk-body-s govuk-!-margin-top-1">SuDS helps schools build environmentally-friendly techniques to manage and control surface water runoff.</p>
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          Fund
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Due to open Autumn 2025</p>
+                        </td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <a class="govuk-link" href="https://www.gov.uk/government/publications/further-education-capital-transformation-fund" target="_blank">
+                            Further Education Capital Transformation Fund (FECT)
+                          </a>
+                          <p class="govuk-body-s govuk-!-margin-top-1">The FECT helps upgrade and transform the FE college estate and significantly reduce the proportion of FE college estate not fit for purpose or in unsatisfactory condition.</p>
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          Fund
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Due to open Autumn 2025</p>
+                        </td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <a class="govuk-link" href="https://www.gov.uk/guidance/connect-the-classroom" target="_blank">
+                            Connect the Clasroom (CTC)
+                          </a>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Connect the classroom is a government-funded programme to improve internet speed in schools. This is done by upgrading wifi access points and network switches.</p>
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          Fund
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Due to open Spring 2025</p>
+                        </td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <a class="govuk-link" href="https://www.gov.uk/government/publications/free-school-pre-opening-guide/free-schools-pre-opening-guide" target="_blank">
+                            Building - Self-delivered Free School projects
+                          </a>
+                          <p class="govuk-body-s govuk-!-margin-top-1">This will provide funding for opening a free school.</p>
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          Fund
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Due to open Autumn 2025</p>
+                        </td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <a class="govuk-link" href="https://www.gov.uk/government/publications/school-rebuilding-programme/school-rebuilding-programme" target="_blank">
+                            Rebuilding - Self-delivered SRP projects
+                          </a>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Carries out major rebuilding and refurbishment projects at school and sixth-form college buildings across England, with buildings prioritised according to their condition.</p>
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          Fund
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Due to open Spring 2025</p>
+                        </td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <a class="govuk-link" href="https://www.gov.uk/government/publications/establishing-school-based-nursery-provision/establishing-school-based-nursery-provision" target="_blank">
+                            School-based Nurseries (SBNs)
+                          </a>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Estates will receive funding to help establish a new school-based nursery.</p>
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          Fund
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Due to open Spring 2025</p>
+                        </td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <a class="govuk-link" href="https://www.gov.uk/government/publications/access-support-from-school-hubs/teaching-school-hubs" target="_blank">
+                            Teaching School Hubs
+                          </a>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Teaching School Hubs helps deliver evidence-based professional development to schools in a designated area of the country.</p>
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          Fund
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Due to open Autumn 2025</p>
+                        </td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <a class="govuk-link" href="https://www.gov.uk/government/publications/heat-networks-zoning-pilot" target="_blank">
+                            Low Carbon Heating - pilot
+                          </a>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Low Carbon Heating helps estate develop a consistent, standardised methodology to identify areas where heat networks are expected to provide the lowest cost, low carbon heat to buildings.</p>
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          Fund
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Due to open Winter 2025</p>
+                        </td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <a class="govuk-link" href="https://www.gov.uk/government/collections/family-hubs-and-start-for-life-programme" target="_blank">
+                            Family Hubs Transformation
+                          </a>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Family Hubs Transformation aims to join up and enhance services delivered through transformed family hubs in local authority areas.</p>
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          Fund
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Due to open Winter 2025</p>
+                        </td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <a class="govuk-link" href="https://www.gov.uk/government/collections/family-hubs-and-start-for-life-programme" target="_blank">
+                            T-level Capital Funding (TLCF) - Buildings and Facilities Improvement Grant (BIFG)
+                          </a>
+                          <p class="govuk-body-s govuk-!-margin-top-1">The TLCF is available to support eligible further education providers offering T Levels from September 2024.</p>
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          Fund
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Due to open Winter 2025</p>
+                        </td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <a class="govuk-link" href="https://www.gov.uk/government/publications/t-levels-capital-fund" target="_blank">
+                            Post-16 Capacity Fund (Post16CF)
+                          </a>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Post16CF gives estates capital investment to accommodate upcoming demographic increases in 16- to 19-year-olds.</p>
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          Fund
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Due to open Summer 2025</p>
+                        </td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <a class="govuk-link" href="https://www.gov.uk/government/publications/rural-services-delivery-grant-determination-2024-to-2025/rural-services-delivery-grant-determination-2024-to-2025" target="_blank">
+                            Rural Services Delivery Grant
+                          </a>
+                          <p class="govuk-body-s govuk-!-margin-top-1">The Rural Services Delivery Grant provides un-ringfenced funding in recognition of the possible additional costs of delivering services in sparsely populated areas.</p>
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          Grant
+                        </td>
+
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--grey">
+                            Closed
+                          </strong>
+                          <p class="govuk-body-s govuk-!-margin-top-1">Due to open Summer 2025</p>
                         </td>
                       </tr>
 
@@ -806,12 +666,8 @@
           <aside class="dfe-aside">
             <h2 class="govuk-heading-m">Related content</h2>
             <ul class="govuk-list govuk-list--spaced">
-              <li><a href="#" class="govuk-link">Public Sector Decarbonisation Scheme</a></li>
-              <li><a href="#" class="govuk-link">Heat and Building Strategy (accessible webpage)</a></li>
-              <li><a href="#" class="govuk-link">Understanding and managing your land and buildings</a></li>
-              <li><a href="#" class="govuk-link">The information you need to know about your estate</a></li>
-              <li><a href="#" class="govuk-link">Net Capacity Assessment (NCA) programme</a></li>
-              <li><a href="#" class="govuk-link">Performance management and sustainability</a></li>
+              <li><a href="https://www.gov.uk/education/funding-for-school-buildings-and-land" class="govuk-link">Funding for school buildings and land</a></li>
+              <li><a href="https://www.gov.uk/guidance/fe-capital-funding" class="govuk-link">Further education capital funding</a></li>
             </ul>
           </aside>
 
