@@ -12,7 +12,7 @@
 
 
 {% set pageName="Estate managers standards framework" %}
-{% set subPageForStandardsName ="Report spending and activities" %}
+{% set subPageForStandardsName ="Estate maintenance and improvements" %}
 
 {% block header %}
 
@@ -40,13 +40,13 @@
   }
   ],
   "primaryLinks": [{
-    "url": "#",
+    "url": "../homepage",
     "label": "Home"
   }, {
-    "url": "#",
+    "url": "../contact-us-for-support",
     "label": "Contact us for support"
   }, {
-    "url": "#",
+    "url": "../report-an-incident",
     "label": "Report an urgent issue"
   }]
 }) }}
@@ -96,14 +96,14 @@
       items: [
         {
           text: "Home",
-          href: '#'
+          href: '../homepage'
+        },
+        {
+          html: "Plan your estate maintenance and improvements",
+          href: "../pages/plan"
         },
         {
           html: pageName,
-          href: "#"
-        },
-        {
-          html: subPageForStandardsName,
           href: "#"
         }
       ]
@@ -125,24 +125,38 @@
         <h1 class="govuk-heading-l">{{ subPageForStandardsName }}</h1>
 
         <!-- Page content here  -->
+        <p class="govuk-body">Every Responsible Body has legal duties to ensure that the buildings and grounds are:</p>
 
-        <p class="govuk-body">Informed and careful project planning can make sure you:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Safe</li>
+          <li>well-maintained</li>
+          <li>suitable for students, staff, and visitors</li>
+        </ul>
 
+        <p class="govuk-body">The following responsibilities come from laws and regulations that must be followed, and best practice actions that will help you manage your estates effectively.</p>
+
+        <h2 class="govuk-heading-m">Estate strategy</h2>
+        <p class="govuk-body">Develop a long-term (3-5 years) estate strategy linked to the school's educational vision.</p>
+
+        <h2 class="govuk-heading-m">Asset management plan</h2>
+        <p class="govuk-body">Align the asset management plan with estate priorities, condition data, and maintenance requirements.</p>
+
+        <h2 class="govuk-heading-m">Risk assessments</h2>
+        <p class="govuk-body">Maintain a risk assessment register to identify and mitigate potential estate risks.</p>
+
+        <h2 class="govuk-heading-m">Budgeting and planning</h2>
+        <p class="govuk-body">Make sure accurate budget forecasts based on past data and risk considerations.</p>
+
+        <h2 class="govuk-heading-m">Planned preventative maintenance</h2>
+        <p class="govuk-body">Develop a balance between planned and reactive maintenance.</p>
+
+        <h2 class="govuk-heading-m">Sustainability planning</h2>
+        <p class="govuk-body">Incorporate sustainability measures, including energy efficiency and climate resilience.</p>
 
       </div>
 
 
-      <!-- Use this section for Related content links -->
-
-      <div class="govuk-grid-column-one-third">
-        <aside class="dfe-aside">
-          <h2 class="govuk-heading-m">Related content</h2>
-          <ul class="govuk-list govuk-list--spaced">
-            <li><a href="#" class="govuk-link">[Link]</a></li>
-            <li><a href="#" class="govuk-link">[Link]</a></li>
-          </ul>
-        </aside>
-      </div>
+      
     
     </div> <!-- THIS DIV CANNOT BE DELETED -->
 

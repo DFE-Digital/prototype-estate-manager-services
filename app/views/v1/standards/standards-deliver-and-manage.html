@@ -12,7 +12,7 @@
 
 
 {% set pageName="Estate managers standards framework" %}
-{% set subPageForStandardsName ="Condition of your estate" %}
+{% set subPageForStandardsName ="Deliver and manage your estate projects" %}
 
 {% block header %}
 
@@ -40,13 +40,13 @@
   }
   ],
   "primaryLinks": [{
-    "url": "#",
+    "url": "../homepage",
     "label": "Home"
   }, {
-    "url": "#",
+    "url": "../contact-us-for-support",
     "label": "Contact us for support"
   }, {
-    "url": "#",
+    "url": "../report-an-incident",
     "label": "Report an urgent issue"
   }]
 }) }}
@@ -96,14 +96,14 @@
       items: [
         {
           text: "Home",
-          href: '#'
+          href: '../homepage'
+        },
+        {
+          html: "Deliver and manage your estate projects",
+          href: "../pages/commission"
         },
         {
           html: pageName,
-          href: "#"
-        },
-        {
-          html: subPageForStandardsName,
           href: "#"
         }
       ]
@@ -125,7 +125,6 @@
         <h1 class="govuk-heading-l">{{ subPageForStandardsName }}</h1>
 
         <!-- Page content here  -->
-
         <p class="govuk-body">Every Responsible Body has legal duties to ensure that the buildings and grounds are:</p>
 
         <ul class="govuk-list govuk-list--bullet">
@@ -136,53 +135,25 @@
 
         <p class="govuk-body">The following responsibilities come from laws and regulations that must be followed, and best practice actions that will help you manage your estates effectively.</p>
 
-        <h2 class="govuk-heading-m">
-          Condition surveys
-        </h2>
+        <h2 class="govuk-heading-m">CDM regulations compliance</h2>
+        <p class="govuk-body">Make sure construction projects comply with the Construction (Design and Management) Regulations 2015.</p>
 
-        <p class="govuk-body">Regular condition surveys to understand the state of buildings and infrastructure.</p>
+        <h2 class="govuk-heading-m">Planning permission</h2>
+        <p class="govuk-body">Secure required planning permissions and ensure compliance with listed building regulations where applicable.</p>
+        
+        <h2 class="govuk-heading-m">Contractor due diligence</h2>
+        <p class="govuk-body">Conduct due diligence when engaging contractors for estate work.</p>
 
-        <h2 class="govuk-heading-m">Asset register</h2>
-
-        <p class="govuk-body">Maintain an up-to-date asset register, including:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>tenure</li>
-          <li>building area</li>
-          <li>statutory compliance records</li>
-        </ul>
-
-        <h2 class="govuk-heading-m">Statutory inspections</h2>
-        <p class="govuk-body">Ensure all plant and equipment requiring statutory inspections are documented and inspected.</p>
-
-        <h2 class="govuk-heading-m">Asbestos management</h2>
-        <p class="govuk-body">Conduct asbestos surveys and maintain an asbestos management plan.</p>
-          
-        <h2 class="govuk-heading-m">Fire safety</h2>
-        <p class="govuk-body">Have a comprehensive fire risk assessment and regularly test fire detection systems.</p>
-
-        <h2 class="govuk-heading-m">Health and safety compliance</h2>
-        <p class="govuk-body">Implement a health and safety policy covering all estate-related risks.</p>
-
-        <h2 class="govuk-heading-m">Structural stability</h2>
-        <p class="govuk-body">Conduct periodic inspections for structural integrity and report any visible changes</p>
-
-        <h2 class="govuk-heading-m">Legal interests and land ownership</h2>
-        <p class="govuk-body">Ensure clarity on the terms of occupation and permissions required for any estate-related work.
+        <h2 class="govuk-heading-m">Fire and safety standards</h2>
+        <p class="govuk-body">Make sure new construction meets fire safety regulations and accessibility requirements.</p>
+        
+        <h2 class="govuk-heading-m">Flood and climate resilience</h2>
+        <p class="govuk-body">Use environment agency data to assess flood risks and implement climate adaptation strategies.</p>
 
       </div>
 
 
-      <!-- Use this section for Related content links -->
-
-      <div class="govuk-grid-column-one-third">
-        <aside class="dfe-aside">
-          <h2 class="govuk-heading-m">Related content</h2>
-          <ul class="govuk-list govuk-list--spaced">
-            <li><a href="#" class="govuk-link">[Link]</a></li>
-            <li><a href="#" class="govuk-link">[Link]</a></li>
-          </ul>
-        </aside>
-      </div>
+      
     
     </div> <!-- THIS DIV CANNOT BE DELETED -->
 
