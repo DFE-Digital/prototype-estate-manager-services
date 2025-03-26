@@ -3,7 +3,7 @@ The ‘Estate manager services prototype’ is an artefact created by the team t
 
 This prototype is based on the:
 
-- [DfE Design System] (https://design.education.gov.uk/design-system/)
+- [DfE Design System](https://design.education.gov.uk/design-system/)
 - [GOV.UK Prototype Kit](https://prototype-kit.service.gov.uk/docs/)
 
 ## Requirements
