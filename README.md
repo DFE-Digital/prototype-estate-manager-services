@@ -1,4 +1,4 @@
-# estate-manager-services
+# Estate Manager Services
 The ‘Estate manager services prototype’ is an artefact created by the team to validate the minimum functionality of the Estate Managers Portal.
 
 This prototype is based on the:
